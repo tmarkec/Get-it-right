@@ -31,8 +31,8 @@ body {
     border: 2px solid black;
     border-radius: 5px;
     padding: 1rem 1.5rem;
-    max-height: 6rem;
-    max-width: 6rem;
+    height: 6rem;
+    width: 7rem;
     font-size: 3.2rem;
     font-weight: 600;
 }
@@ -41,4 +41,31 @@ body {
     font-weight: 600;
     margin: 1rem 2rem;
     word-spacing: 8px;
+}
+.prediction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.prediction-number {
+    margin: 1rem auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0.2rem;
+    height: 6rem;
+    width: 7rem;
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+.btn {
+    margin: 1rem;
+    padding: 0.3rem 0.6rem;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    box-shadow: 3px 3px 7px grey ;
+}
+.btn:hover {
+    cursor:pointer;
 }
