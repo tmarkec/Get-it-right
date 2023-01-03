@@ -48,9 +48,9 @@ body {
 .btn-start {
     margin: 2rem;
 }
-/* .hidden {
+.hidden {
     display: none;
-} */
+}
 .container-body {
     position: relative;
     display: flex;
