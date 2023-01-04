@@ -34,7 +34,7 @@ document.querySelector('.btn-check').addEventListener('click', function () {
     } 
     //guess is larger than random number
     else if (input > randomNum) 
-    if (lives > 0) {
+    if (lives > 1) {
         document.getElementById('text').textContent = 'Way to high'
         document.body.style.background= 'red'
         score = score + 1;
@@ -48,7 +48,7 @@ document.querySelector('.btn-check').addEventListener('click', function () {
     } 
     //guess is lower than random number
     else if (input < randomNum) 
-    if(lives > 0){
+    if(lives > 1){
         document.querySelector('.random-text').textContent = 'Way to low'
         document.body.style.background= 'red'
         score = score + 1;
