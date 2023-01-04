@@ -12,3 +12,7 @@ startBtn.addEventListener('click', function() {
 }) */
 
 // game page
+let randomNum = Math.trunc(Math.random() * 10) + 1;
+console.log(randomNum);
+document.querySelector('.random-number').textContent = 10;
+document.querySelector('.prediction-number').value = 5;

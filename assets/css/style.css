@@ -125,10 +125,10 @@ body {
 }
 .btn:hover {
     cursor:pointer;
-     -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-       transform: scale(1.1);
-      transition: 1s ease;
+    add-webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 1s ease;
     background-color: aliceblue;
 }
 .score {
