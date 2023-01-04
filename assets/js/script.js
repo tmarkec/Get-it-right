@@ -1,11 +1,14 @@
-//landing page play btn
-let play = document.getElementById('blur');
-let containerBox = document.getElementById('container-box');
+/**
+ * landing page btn not working so it set to hidden
+ * fix issue!!!!!!
+
+let play = document.getElementById('welcome-box');
+let games = document.getElementById('game-box');
 let startBtn = document.getElementById('start-btn');
 
-startBtn.addEventListener('click', function (e) {
-if(e == 'click') {
+startBtn.addEventListener('click', function() {
     play.classList.add('inactive');
-    containerBox.classList.add('active')
-}
-})
+    games.classList.add('active');
+}) */
+
+// game page

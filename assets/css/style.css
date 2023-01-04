@@ -1,9 +1,7 @@
 * {
     margin: 0 auto;
     padding: 0;
-    box-sizing: border-box;
     max-width: 1400px;
-    max-height: 100vh;
 }
 body {
     background-color: #fff;
@@ -14,10 +12,10 @@ body {
     top: 50%;
     left: 50%;
     background-color: #fff;
-    height: 100vh;
+    max-height: 100vh;
     max-width: 90vw;
     transform: translate(-50%, -50%) scale(1);
-    visibility: visible;
+    visibility: hidden;
 }
 .blur-box { 
     display: flex;
@@ -52,20 +50,25 @@ body {
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
   }
-  .inactive {
+.inactive {
     visibility: hidden;
     top: 0;
     transform: translate(-50%, -50%) scale(0.1);
   }
 .game {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
     background-color: #fff;
-    height: 900px;
-    width: 900px;
-    visibility: hidden;
-    transform: translate(-50%, -50%) scale(0.1);
+    /* height: 100%; */
+    max-width: 90vw;
+    margin: 3rem 1rem;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
 }
 .head {
     font-size: 2.3rem;
@@ -77,17 +80,16 @@ body {
     align-items: center;
     justify-content: space-around;
     margin: 2rem 1rem;
-    width: 50%;
 
 }
 .random-number {
     text-align: center;
     margin: 1rem 2rem;
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 50%;
     padding: 1rem 1.5rem;
-    height: 6rem;
-    width: 7rem;
+    height: 4rem;
+    width: 4rem;
     font-size: 3.2rem;
     font-weight: 600;
 }
@@ -133,7 +135,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 2rem 1rem;
+    margin: 1rem;
     width: 70%;
 }
 .highscore {
