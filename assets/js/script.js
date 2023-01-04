@@ -20,7 +20,7 @@ console.log(score)
 // document.querySelector('.random-number').textContent = 10;
 // document.querySelector('.prediction-number').value = 5;
 //click button to check score
-document.querySelector('.btn-check').addEventListener('click', function () {
+document.getElementById('btn-check').addEventListener('click', function () {
     let input = +(document.querySelector('.prediction-number').value)
     //guess is letter or no number
     if (!input) {
@@ -45,12 +45,12 @@ document.querySelector('.btn-check').addEventListener('click', function () {
     else{
         lives = 0;
         document.getElementById('text').textContent = 'You lost!!!'
+        document.body.style.background= 'red'
     } 
     //guess is lower than random number
     else if (input < randomNum) 
     if(lives > 1){
         document.querySelector('.random-text').textContent = 'Way to low'
-        document.body.style.background= 'red'
         score = score + 1;
         document.querySelector('.nmb-blue').textContent = score
         lives = lives - 1;
@@ -60,4 +60,17 @@ document.querySelector('.btn-check').addEventListener('click', function () {
         lives = 0;
          document.getElementById('text').textContent = 'You lost!!!'
     } 
+})
+
+
+//play again game
+        document.getElementById('btn-again').addEventListener('click', function () {
+        score = document.querySelector('.nmb-blue').textContent = 0;
+        randomNum = Math.trunc(Math.random() * 20) + 1;
+        document.getElementById('text').textContent = 'Start guessing...';
+        document.querySelector('.prediction-number').value = ''
+        document.getElementById('random-pick').textContent = '?'
+        document.body.style.background= 'white'
+        
+    
 })
