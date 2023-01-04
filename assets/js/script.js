@@ -12,7 +12,16 @@ startBtn.addEventListener('click', function() {
 }) */
 
 // game page
-let randomNum = Math.trunc(Math.random() * 10) + 1;
+let randomNum = Math.trunc(Math.random() * 1) + 1;
 console.log(randomNum);
-document.querySelector('.random-number').textContent = 10;
-document.querySelector('.prediction-number').value = 5;
+// document.querySelector('.random-number').textContent = 10;
+// document.querySelector('.prediction-number').value = 5;
+//check button
+document.querySelector('.btn-check').addEventListener('click', function() {
+    let guess = +(document.querySelector('.prediction-number').value)
+ if(guess === randomNum) {
+    document.querySelector('.random-text').textContent = 'Well done'
+    document.querySelector('.random-number').textContent = randomNum;
+ }
+
+})
