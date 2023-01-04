@@ -14,7 +14,8 @@ startBtn.addEventListener('click', function() {
 // game page
 let randomNum = Math.trunc(Math.random() * 10) + 1;
 document.getElementById('random-pick').textContent = randomNum;
-let score = document.querySelector('.nmb-blue').textContent = 0;
+let score = document.querySelector('.nmb-blue').textContent = 10;
+console.log(score)
 // document.querySelector('.random-number').textContent = 10;
 // document.querySelector('.prediction-number').value = 5;
 //click button to check score
@@ -22,7 +23,7 @@ document.querySelector('.btn-check').addEventListener('click', function () {
     let input = +(document.querySelector('.prediction-number').value)
     //guess is letter or no number
     if (!input) {
-        document.getElementById('text').textContent = 'Please type number!!'
+        document.getElementById('text').textContent = 'Please type a number!!'
     } 
     //guess is equal to random number
     else if (input === randomNum) {
@@ -34,13 +35,15 @@ document.querySelector('.btn-check').addEventListener('click', function () {
     else if (input > randomNum) {
         document.getElementById('text').textContent = 'Way to high'
         document.body.style.background= 'red'
-        score = score + 1;
+        score = score - 1;
+        document.querySelector('.nmb-blue').textContent = score
     } 
     //guess is lower than random number
     else if (input < randomNum) {
         document.querySelector('.random-text').textContent = 'Way to low'
         document.body.style.background= 'red'
         score = score - 1;
+        document.querySelector('.nmb-blue').textContent = score
     }
 
 })
