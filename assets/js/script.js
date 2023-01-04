@@ -23,5 +23,11 @@ document.querySelector('.btn-check').addEventListener('click', function() {
     document.querySelector('.random-text').textContent = 'Well done'
     document.querySelector('.random-number').textContent = randomNum;
  }
+ else if(guess > randomNum) {
+    document.querySelector('.random-text').textContent = 'Way to high'
+ }
+ else if(guess < randomNum) {
+    document.querySelector('.random-text').textContent = 'Way to low'
+ }
 
 })
