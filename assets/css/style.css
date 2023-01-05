@@ -1,21 +1,17 @@
 * {
     margin: 0 auto;
     padding: 0;
-    max-width: 1400px;
+    
 }
-body {
-    background-color: #fff;
+.background {
+    height: 100%;
+    width: 100%;
     
 }
 .welcome {  
-    position: absolute;
-    top: 50%;
-    left: 50%;
     background-color: #fff;
-    max-height: 100vh;
-    max-width: 90vw;
-    transform: translate(-50%, -50%) scale(1);
-    visibility: hidden;
+    height: 100vh;
+    width: 90vw;  
 }
 .blur-box { 
     display: flex;
@@ -27,7 +23,6 @@ body {
     border-radius: 8px;
     background-color: #F1F7ED;
     box-shadow: 4px 4px 8px black;
-    z-index: 10;
 }
 .blur-box h1 {
     font-size: 1.6rem;
@@ -45,7 +40,7 @@ body {
 .btn-start {
     margin: 2rem;
 }
-.active {
+/* .active {
     visibility: visible;
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
@@ -54,22 +49,27 @@ body {
     visibility: hidden;
     top: 0;
     transform: translate(-50%, -50%) scale(0.1);
-  }
+  } */
 .game {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+.hidden {
+    display: none;
+  }
+  .game-container {
+    height: 600px;
+    max-height: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
-    background-color: #fff;
-    /* height: 100%; */
-    max-width: 90vw;
-    margin: 3rem 1rem;
-    visibility: visible;
-    transform: translate(-50%, -50%) scale(1);
-}
+    margin: 1rem;
+  }
 .head {
     font-size: 2.3rem;
     padding-top: 2rem;

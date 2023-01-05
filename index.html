@@ -25,26 +25,28 @@
                 <button id="start-btn" class="btn">Play</button>
             </div>
         </div>
-        <div id="game-box" class="game">
-            <header class="head">
-                <h1>Try to get it right</h1>
-                <!-- I'm thinking of a number between 1 - 20 -->
-            </header>
-            <section class="random">
-                <div id="random-pick" class="random-number">?
-                </div>
-                <div id="text" class="random-text">Start guessing...</div>
-            </section>
-            <section class="prediction">
-                <input type="number" id="prediction-number" class="predictions">
-                <button id="btn-check" class="btn">Check</button>
-            </section>
-            <section class="score">
-                <!-- try different approach, change lifes/score in simple version -->
-                <p class="highscore">You tried <span id="nmb-blue"></span> times!</p>
-                <p class="life">Numbers: <span id="nmb-red"> </span></p>
-            </section>
-            <button id="btn-again" class="btn">Play again</button>
+        <div id="game-box" class="game hidden">
+            <div class="game-container">
+                <header class="head">
+                    <h1>Try to get it right</h1>
+                    <!-- I'm thinking of a number between 1 - 20 -->
+                </header>
+                <section class="random">
+                    <div id="random-pick" class="random-number">?
+                    </div>
+                    <div id="text" class="random-text">Start guessing...</div>
+                </section>
+                <section class="prediction">
+                    <input type="number" id="prediction-number" class="predictions">
+                    <button id="btn-check" class="btn">Check</button>
+                </section>
+                <section class="score">
+                    <!-- try different approach, change lifes/score in simple version -->
+                    <p class="highscore">You tried <span id="nmb-blue"></span> times!</p>
+                    <p class="life">Numbers: <span id="nmb-red"> </span></p>
+                </section>
+                <button id="btn-again" class="btn">Play again</button>
+            </div>
         </div>
     </div>
     <script src="https://kit.fontawesome.com/cccdb242ea.js" crossorigin="anonymous"></script>

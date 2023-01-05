@@ -1,15 +1,13 @@
 /**
  * landing page btn not working so it set to hidden
  * fix issue!!!!!!
+*/
+let games = document.getElementById("game-box");
+let startBtn = document.getElementById("start-btn");
 
-let play = document.getElementById('welcome-box');
-let games = document.getElementById('game-box');
-let startBtn = document.getElementById('start-btn');
-
-startBtn.addEventListener('click', function() {
-    play.classList.add('inactive');
-    games.classList.add('active');
-}) */
+startBtn.addEventListener("click", function () {
+  games.classList.remove("hidden");
+});
 
 // game page
 let randomNum = Math.trunc(Math.random() * 20) + 1;
@@ -24,9 +22,11 @@ document.getElementById('btn-check').addEventListener('click', function () {
     let input = +(document.getElementById('prediction-number').value);
     info.push(input);
     document.getElementById('nmb-red').textContent = info
+    
     //guess is letter or no number
     if (!input) {
         displayText('Please type a number!!!')
+
     }
     //guess is equal to random number
     else if (input === randomNum) {
@@ -38,9 +38,9 @@ document.getElementById('btn-check').addEventListener('click', function () {
         document.getElementById('prediction-number').value =''
         document.getElementById('random-pick').style.border = '0'
         document.getElementById('random-pick').style.color = 'green'
-       
-        
+
     }
+   
     //guess is larger than random number
     else if (input > randomNum) {
         if (score <= 4) {
@@ -56,6 +56,7 @@ document.getElementById('btn-check').addEventListener('click', function () {
         }
         
     }
+   
     //guess is lower than random number
     else if (input < randomNum) {
         if (score <= 4) {
@@ -71,9 +72,9 @@ document.getElementById('btn-check').addEventListener('click', function () {
         }
     } else {
         document.getElementById('random-text').textContent = 'You lost'
+        document.getElementById('nmb-blue').textContent = 0;
     }
 });
-
 
 //play again game
 document.getElementById('btn-again').addEventListener('click', function () {
