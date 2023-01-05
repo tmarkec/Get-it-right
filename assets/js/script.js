@@ -14,65 +14,76 @@ startBtn.addEventListener('click', function() {
 // game page
 let randomNum = Math.trunc(Math.random() * 20) + 1;
 document.getElementById('random-pick').textContent = randomNum;
-let score = document.querySelector('.nmb-blue').textContent = 0;
-let storeNumbers = document.querySelector('.nmb-red')
+let score = document.getElementById('nmb-blue').textContent = 0;
 let info = [];
+let displayText = function(text) {
+    document.getElementById('text').textContent = text;
+}
 //click button to check score
 document.getElementById('btn-check').addEventListener('click', function () {
-    let input = +(document.querySelector('.prediction-number').value);
+    let input = +(document.getElementById('prediction-number').value);
     info.push(input);
-    document.querySelector('.nmb-red').textContent = info
+    document.getElementById('nmb-red').textContent = info
     //guess is letter or no number
     if (!input) {
-        document.getElementById('text').textContent = 'Please type a number!!'
+        displayText('Please type a number!!!')
     }
     //guess is equal to random number
     else if (input === randomNum) {
-        document.getElementById('text').textContent = `Yuhuu your No. of guesses = ${score+1}`
+        displayText= (`Well done! Your No. of guesses = ${score+1}`)
         document.getElementById('random-pick').textContent = randomNum;
         score = score + 1;
-        document.querySelector('.nmb-blue').textContent = score
+        document.getElementById('nmb-blue').textContent = score
         document.body.style.background = 'green'
-        document.querySelector('.prediction-number').value =''
-        console.log(info)
+        document.getElementById('prediction-number').value =''
+        document.getElementById('random-pick').style.border = '0'
+        document.getElementById('random-pick').style.color = 'green'
+       
         
     }
     //guess is larger than random number
     else if (input > randomNum) {
         if (score <= 4) {
-            document.getElementById('text').textContent = 'Way to high'
+            displayText('Way to high')
             score = score + 1;
-            document.querySelector('.nmb-blue').textContent = score
+            document.getElementById('nmb-blue').textContent = score
         } else {
-            document.getElementById('text').textContent = 'You lost'
-            document.querySelector('.prediction-number').value ='' 
+            displayText('You lost')
+            document.getElementById('prediction-number').value =''
+            document.getElementById('random-pick').textContent = randomNum;
+            document.getElementById('random-pick').style.border = '0'
+            document.getElementById('random-pick').style.color = 'red' 
         }
         
     }
     //guess is lower than random number
     else if (input < randomNum) {
         if (score <= 4) {
-            document.getElementById('text').textContent = 'Way to low'
+            displayText('Way to low')
             score = score + 1;
-            document.querySelector('.nmb-blue').textContent = score
+            document.getElementById('nmb-blue').textContent = score
         } else {
-            document.getElementById('text').textContent = 'You lost'
-            document.querySelector('.prediction-number').value =''   
+            displayText('You lost')
+            document.getElementById('prediction-number').value ='' 
+            document.getElementById('random-pick').textContent = randomNum; 
+            document.getElementById('random-pick').style.border = '0'
+            document.getElementById('random-pick').style.color = 'red' 
         }
     } else {
-        document.querySelector('.random-text').textContent = 'You lost'
+        document.getElementById('random-text').textContent = 'You lost'
     }
 });
 
 
 //play again game
 document.getElementById('btn-again').addEventListener('click', function () {
-    score = document.querySelector('.nmb-blue').textContent = 0;
+    score = document.getElementById('nmb-blue').textContent = 0;
     randomNum = Math.trunc(Math.random() * 20) + 1;
     document.getElementById('text').textContent = 'Start guessing...';
-    document.querySelector('.prediction-number').value = ''
+    document.getElementById('prediction-number').value = ''
     document.getElementById('random-pick').textContent = '?'
     document.body.style.background = 'white'
-    info.splice(any[])
+    info = []
+    document.getElementById('nmb-red').innerHTML = ''
 
 })
