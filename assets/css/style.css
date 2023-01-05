@@ -9,6 +9,9 @@
     
 }
 .welcome {  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #fff;
     height: 100vh;
     width: 90vw;  
@@ -18,6 +21,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 50%;
     padding: 2rem;
     border: 2px solid black;
     border-radius: 8px;
@@ -55,15 +59,14 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #fff;
+    overflow: visible;
 }
 .hidden {
     display: none;
   }
   .game-container {
-    height: 600px;
-    max-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,33 +74,31 @@
     margin: 1rem;
   }
 .head {
-    font-size: 2.3rem;
-    padding-top: 2rem;
-    word-spacing: 10px;
+    font-size: 1.4rem;
+    padding-top: 1rem;
 }
 .random {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 2rem 1rem;
-
+    margin: 1rem;
 }
 .random-number {
+    align-items: center;
     text-align: center;
     margin: 1rem 2rem;
     border: 2px solid black;
-    border-radius: 50%;
-    padding: 1rem 1.5rem;
-    height: 4rem;
-    width: 4rem;
-    font-size: 3.2rem;
-    font-weight: 600;
+    border-radius: 40%;
+    padding:0.5rem;
+    height: 3rem;
+    width: 3rem;
+    font-size: 2.8rem;
+    font-weight: 800;
 }
 .random-text {
     font-size: 1.8rem;
     font-weight: 600;
-    margin: 1rem 2rem;
-    word-spacing: 8px;
+    margin: 1rem 2rem;   
 }
 .prediction {
     display: flex;
@@ -111,9 +112,9 @@
     border: 2px solid black;
     border-radius: 5px;
     padding: 0.2rem;
-    height: 6rem;
-    width: 7rem;
-    font-size: 3.2rem;
+    height: 4rem;
+    width: 5rem;
+    font-size: 3rem;
     font-weight: 600;
 }
 .btn {
