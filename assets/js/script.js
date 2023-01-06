@@ -3,8 +3,7 @@
  */
 let games = document.getElementById("game-box");
 let startBtn = document.getElementById("start-btn");
-//button hides page with rules
-startBtn.addEventListener("click", function () {
+startBtn.addEventListener("click", function () { //button hides page with rules
   games.classList.remove("hidden");
 });
 
@@ -27,7 +26,7 @@ document.getElementById('btn-check').addEventListener('click', function () {
         displayText('Already tried this number!!!')
         return
     }
-    //limit user pick numbers within the game
+    //limit user pick numbers within the game rules and avoid number 0
     if (input > 20 || input == 0) {
         document.getElementById("prediction-number").value = "";
         return displayText("Please pick number between 1-20");
@@ -52,19 +51,19 @@ document.getElementById('btn-check').addEventListener('click', function () {
         document.body.style.background = 'green'
         document.getElementById('prediction-number').value =''
         document.getElementById('random-pick').style.border = '0'
-        document.getElementById('random-pick').style.color = 'green'
         return
     }
    
    //if user guess is higher or lower than random picked
         if (score <= 4) {
             document.getElementById('text').textContent = input > randomNum ? 'Your guess is too high' : 'Your guess is too low';      
-        } else {
+        } 
+    // user lose game
+    else {
             displayText('You lost')
             document.getElementById('prediction-number').value =''
             document.getElementById('random-pick').textContent = randomNum;
             document.getElementById('random-pick').style.border = '0'
-            document.getElementById('random-pick').style.color = 'red' 
             document.getElementById('btn-check').disabled = true 
         }
     
