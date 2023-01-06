@@ -15,11 +15,13 @@ const info = []; //array using to display users guess numbers
 const predictionNumber = document.getElementById("prediction-number");
 const randomPick = document.getElementById('random-pick');
 const redNumber = document.getElementById('nmb-red');
-document.getElementById('btn-check').disabled = false;
+// function getRandomNmb (){
+//     return Math.trunc(Math.random() * 20) + 1;
+// }
+// getRandomNmb()
 let displayText = function (text) {
     document.getElementById('text').textContent = text
 };
-
 /**function for checking user input
  * with different outcomes
  */
@@ -54,11 +56,12 @@ document.getElementById('btn-check').addEventListener('click', function () {
         randomPick.textContent = randomNum;
         predictionNumber.value = '';
         randomPick.style.border = '0';
+        document.getElementById('btn-check').disabled = true;
         return
     }
 
     //if user guess is higher or lower than random picked
-    if (score <= 4) {
+    if (score !== randomNum) {
         document.getElementById('text').textContent = input > randomNum ? 'Your guess is too high' : 'Your guess is too low';
     }
     // user lose game
@@ -68,6 +71,7 @@ document.getElementById('btn-check').addEventListener('click', function () {
         randomPick.textContent = randomNum;
         randomPick.style.border = '0';
         document.getElementById('btn-check').disabled = true;
+        
     }
 
 });
@@ -83,4 +87,5 @@ document.getElementById('btn-again').addEventListener('click', function () {
     info = [];
     redNumber.innerHTML = '';
     document.getElementById('btn-check').disabled = false;
+    // bntCheck.removeAttribute('disabled');
 })
