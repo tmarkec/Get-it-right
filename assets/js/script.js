@@ -7,7 +7,7 @@ startBtn.addEventListener("click", function () {
 });
 
 // rundom number game page
-let randomNum = Math.trunc(Math.random() * 20) + 1;//creates random number
+let randomNum = Math.trunc(Math.random() * 20);//creates random number between 0 -20
 document.getElementById('random-pick').textContent = randomNum;
 let score = document.getElementById('nmb-blue').textContent = 0;//score set to 0
 let info = [];//array using to display users guess numbers
@@ -17,8 +17,16 @@ let displayText = function(text) {
 
 //function for checking user input
 document.getElementById('btn-check').addEventListener('click', function () {
-    debugger
+   
     let input = +(document.getElementById('prediction-number').value);
+    if (info.includes(input)){
+        displayText('Already tried this number!!!')
+        return
+    }
+    if (input > 20) {
+        document.getElementById("prediction-number").value = "";
+        return displayText("Please pick number between 0-20");
+      }
     if (!input && input !== 0) {
        return displayText('Please type a number!!!');  
     }
@@ -41,26 +49,9 @@ document.getElementById('btn-check').addEventListener('click', function () {
         return
     }
    
-    //guess is larger than random number
-    // else if (input > randomNum) {
-    //     if (score <= 4) {
-    //         displayText('Way to high')
-    //         score = score + 1;
-    //         document.getElementById('nmb-blue').textContent = score
-    //     } else {
-    //         displayText('You lost')
-    //         document.getElementById('prediction-number').value =''
-    //         document.getElementById('random-pick').textContent = randomNum;
-    //         document.getElementById('random-pick').style.border = '0'
-    //         document.getElementById('random-pick').style.color = 'red' 
-    //     }
-    
-    // }
-    //if user guess is lower or greater than random number
-    
+   //is user guess is higher or lower than random number
         if (score <= 4) {
-            document.getElementById('text').textContent = input > randomNum ? 'Your guess is too high' : 'Your guess is too low'; 
-            
+            document.getElementById('text').textContent = input > randomNum ? 'Your guess is too high' : 'Your guess is too low';      
         } else {
             displayText('You lost')
             document.getElementById('prediction-number').value =''
@@ -70,38 +61,18 @@ document.getElementById('btn-check').addEventListener('click', function () {
             document.getElementById('btn-check').disabled = true 
         }
     
-  
-    //guess is lower than random number
-    // else if (input < randomNum) {
-    //     if (score <= 4) {
-    //         displayText('Way to low')
-    //         score = score + 1;
-    //         document.getElementById('nmb-blue').textContent = score
-    //     } else {
-    //         displayText('You lost')
-    //         document.getElementById('prediction-number').value ='' 
-    //         document.getElementById('random-pick').textContent = randomNum; 
-    //         document.getElementById('random-pick').style.border = '0'
-    //         document.getElementById('random-pick').style.color = 'red' 
-    //     }
-
-    //  else {
-    //     displayText('You lost')
-    //     document.getElementById('nmb-blue').textContent = 0;
-    //     document.getElementById('prediction-number').value =''
-    //     document.getElementById('random-pick').textContent = randomNum;
-    // }
 });
 
 //function for playing another game
 document.getElementById('btn-again').addEventListener('click', function () {
     score = document.getElementById('nmb-blue').textContent = 0;
-    randomNum = Math.trunc(Math.random() * 20) + 1;
+    randomNum = Math.trunc(Math.random() * 20);
     document.getElementById('text').textContent = 'Start guessing...';
     document.getElementById('prediction-number').value = ''
     document.getElementById('random-pick').textContent = '?'
     document.body.style.background = 'white'
     info = []
     document.getElementById('nmb-red').innerHTML = ''
+    document.getElementById('btn-check').disabled = false;
 
 })
