@@ -1,4 +1,6 @@
-//loading page
+/**landing page
+ *  add user name input?! which will replicate in the score
+ */
 let games = document.getElementById("game-box");
 let startBtn = document.getElementById("start-btn");
 //button hides page with rules
@@ -15,18 +17,22 @@ let displayText = function(text) {
     document.getElementById('text').textContent = text;
 }
 
-//function for checking user input
+/**function for checking user input
+ * with different outcomes
+ */
 document.getElementById('btn-check').addEventListener('click', function () {
-   
     let input = +(document.getElementById('prediction-number').value);
+    //user input same as already picked one
     if (info.includes(input)){
         displayText('Already tried this number!!!')
         return
     }
+    //limit user pick numbers within the game
     if (input > 20) {
         document.getElementById("prediction-number").value = "";
         return displayText("Please pick number between 0-20");
       }
+
     if (!input && input !== 0) {
        return displayText('Please type a number!!!');  
     }
@@ -36,9 +42,9 @@ document.getElementById('btn-check').addEventListener('click', function () {
     document.getElementById('nmb-red').textContent = info
     document.getElementById('prediction-number').value=''
     document.getElementById('prediction-number').focus();
-    //is user guess is letter or no number
+
     
-    //guess is equal to random number-if user wins
+    //user wins the game
      if (input === randomNum) {
         displayText(`Well done! Your No. of guesses = ${score}`)
         document.getElementById('random-pick').textContent = randomNum;
@@ -49,7 +55,7 @@ document.getElementById('btn-check').addEventListener('click', function () {
         return
     }
    
-   //is user guess is higher or lower than random number
+   //if user guess is higher or lower than random picked
         if (score <= 4) {
             document.getElementById('text').textContent = input > randomNum ? 'Your guess is too high' : 'Your guess is too low';      
         } else {
@@ -63,7 +69,7 @@ document.getElementById('btn-check').addEventListener('click', function () {
     
 });
 
-//function for playing another game
+//function to playing again
 document.getElementById('btn-again').addEventListener('click', function () {
     score = document.getElementById('nmb-blue').textContent = 0;
     randomNum = Math.trunc(Math.random() * 20);
