@@ -18,21 +18,21 @@ let displayText = function(text) {
 //function for checking user input
 document.getElementById('btn-check').addEventListener('click', function () {
     let input = +(document.getElementById('prediction-number').value);
+    if (!input && input !== 0) {
+       return displayText('Please type a number!!!');  
+    }
+    score++
+    document.getElementById('nmb-blue').textContent = score
     info.push(input);
     document.getElementById('nmb-red').textContent = info
     document.getElementById('prediction-number').value=''
     document.getElementById('prediction-number').focus();
     //is user guess is letter or no number
-    if (!input) {
-        displayText('Please type a number!!!')
-
-    }
+    
     //guess is equal to random number-if user wins
-    else if (input === randomNum) {
-        displayText(`Well done! Your No. of guesses = ${score+1}`)
+     if (input === randomNum) {
+        displayText(`Well done! Your No. of guesses = ${score}`)
         document.getElementById('random-pick').textContent = randomNum;
-        score = score + 1;
-        document.getElementById('nmb-blue').textContent = score
         document.body.style.background = 'green'
         document.getElementById('prediction-number').value =''
         document.getElementById('random-pick').style.border = '0'
@@ -56,11 +56,12 @@ document.getElementById('btn-check').addEventListener('click', function () {
     
     // }
     //if user guess is lower or greater than random number
+    
     else if (input !== randomNum) {
         if (score <= 4) {
             document.getElementById('text').textContent = input > randomNum ? 'Your guess is too high' : 'Your guess is too low';
-            score = score + 1;
-            document.getElementById('nmb-blue').textContent = score
+            
+            
         } else {
             displayText('You lost')
             document.getElementById('prediction-number').value =''

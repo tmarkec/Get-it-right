@@ -62,6 +62,7 @@
     height: 100vh;
     background-color: #fff;
     overflow: visible;
+    background-image: radial-gradient(circle farthest-side, #fceabb, #f8b500);
 }
 .hidden {
     display: none;
