@@ -9,7 +9,7 @@ startBtn.addEventListener("click", function () {
 });
 
 // rundom number game page
-let randomNum = Math.trunc(Math.random() * 20);//creates random number between 0 -20
+let randomNum = Math.trunc(Math.random() * 20) +1;//creates random number between 1 -20
 document.getElementById('random-pick').textContent = randomNum;
 let score = document.getElementById('nmb-blue').textContent = 0;//score set to 0
 let info = [];//array using to display users guess numbers
@@ -28,13 +28,14 @@ document.getElementById('btn-check').addEventListener('click', function () {
         return
     }
     //limit user pick numbers within the game
-    if (input > 20) {
+    if (input > 20 || input == 0) {
         document.getElementById("prediction-number").value = "";
-        return displayText("Please pick number between 0-20");
+        return displayText("Please pick number between 1-20");
       }
 
-    if (!input && input !== 0) {
-       return displayText('Please type a number!!!');  
+    if (!input) {
+        displayText('Please type a number!!!');
+        return  
     }
     score++
     document.getElementById('nmb-blue').textContent = score
@@ -72,7 +73,7 @@ document.getElementById('btn-check').addEventListener('click', function () {
 //function to playing again
 document.getElementById('btn-again').addEventListener('click', function () {
     score = document.getElementById('nmb-blue').textContent = 0;
-    randomNum = Math.trunc(Math.random() * 20);
+    randomNum = Math.trunc(Math.random() * 20) +1;
     document.getElementById('text').textContent = 'Start guessing...';
     document.getElementById('prediction-number').value = ''
     document.getElementById('random-pick').textContent = '?'
