@@ -17,6 +17,7 @@ let displayText = function(text) {
 
 //function for checking user input
 document.getElementById('btn-check').addEventListener('click', function () {
+    debugger
     let input = +(document.getElementById('prediction-number').value);
     if (!input && input !== 0) {
        return displayText('Please type a number!!!');  
@@ -37,7 +38,7 @@ document.getElementById('btn-check').addEventListener('click', function () {
         document.getElementById('prediction-number').value =''
         document.getElementById('random-pick').style.border = '0'
         document.getElementById('random-pick').style.color = 'green'
-
+        return
     }
    
     //guess is larger than random number
@@ -57,10 +58,8 @@ document.getElementById('btn-check').addEventListener('click', function () {
     // }
     //if user guess is lower or greater than random number
     
-    else if (input !== randomNum) {
         if (score <= 4) {
-            document.getElementById('text').textContent = input > randomNum ? 'Your guess is too high' : 'Your guess is too low';
-            
+            document.getElementById('text').textContent = input > randomNum ? 'Your guess is too high' : 'Your guess is too low'; 
             
         } else {
             displayText('You lost')
@@ -68,9 +67,10 @@ document.getElementById('btn-check').addEventListener('click', function () {
             document.getElementById('random-pick').textContent = randomNum;
             document.getElementById('random-pick').style.border = '0'
             document.getElementById('random-pick').style.color = 'red' 
+            document.getElementById('btn-check').disabled = true 
         }
     
-    }
+  
     //guess is lower than random number
     // else if (input < randomNum) {
     //     if (score <= 4) {
@@ -85,12 +85,12 @@ document.getElementById('btn-check').addEventListener('click', function () {
     //         document.getElementById('random-pick').style.color = 'red' 
     //     }
 
-     else {
-        displayText('You lost')
-        document.getElementById('nmb-blue').textContent = 0;
-        document.getElementById('prediction-number').value =''
-        document.getElementById('random-pick').textContent = randomNum;
-    }
+    //  else {
+    //     displayText('You lost')
+    //     document.getElementById('nmb-blue').textContent = 0;
+    //     document.getElementById('prediction-number').value =''
+    //     document.getElementById('random-pick').textContent = randomNum;
+    // }
 });
 
 //function for playing another game
