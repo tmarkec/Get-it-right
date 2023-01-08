@@ -15,21 +15,30 @@
     <div class="background">
         <div id="welcome-box" class="welcome">
             <div id="blur" class="blur-box">
-                <h1>Welcome to "Guess which" game</h1>
+                <h1>Welcome to "Guess my number"</h1>
                 <ol>
-                    <li>Try to guess random number from 1-20 by using your luck - not brain skills involved</li>
-                    <li>Check y</li>
+                    <li>Try to guess random number from 1-25 using your luck skills</li>
                     <li>You only have 5 tries for game</li>
                     <li>Not happy with your performance, you can always "Play again"</li>
+                    <li>Type your username bellow and lets get you started!!!</li>
                 </ol>
-                <button id="start-btn" class="btn">Play</button>
+                <label for="tbuser"> Username</label>
+                <input type="text" name="username" id="tbuser" class="user-label" />
+                <input
+                  type="button"
+                  id="start-btn"
+                  class="btn"
+                  onclick="passValue()"
+                  value="Play"
+                />
+               
             </div>
         </div>
         <div id="game-box" class="game hidden">
             <div class="game-container">
                 <header class="head">
-                    <h1>Think of the number between 0 - 20?!</h1>
-                    <!-- I'm thinking of a number between 1 - 20 -->
+                    <h1>Think of the number between 1 - 25?!</h1>
+                    <!-- I'm thinking of a number between 1 - 25 -->
                 </header>
                 <section class="random">
                     <div id="random-pick" class="random-number">?
@@ -42,7 +51,7 @@
                 </section>
                 <section class="score">
                     <!-- try different approach, change lifes/score in simple version -->
-                    <p class="highscore">You tried <span id="nmb-blue"></span> times!</p>
+                    <p class="highscore"><span id="userN"> </span> tried <span id="nmb-blue"></span> times!</p>
                     <p class="life">Numbers you tried so far: <span id="nmb-red"> </span></p>
                 </section>
                 <button id="btn-again" class="btn">Play again</button>

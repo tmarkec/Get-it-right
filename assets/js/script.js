@@ -5,10 +5,12 @@ const games = document.getElementById("game-box");
 const startBtn = document.getElementById("start-btn");
 startBtn.addEventListener("click", function () { //button hides page with rules
     games.classList.remove("hidden");
+    document.getElementById("userN").innerHTML = document.getElementById("tbuser").value;
 });
 
 // rundom number game page
-let randomNum = Math.trunc(Math.random() * 20) + 1; //creates random number between 1 -20
+let userName = document.getElementById("userN")
+let randomNum = Math.trunc(Math.random() * 25) + 1; //creates random number between 1 -20
 document.getElementById('random-pick').textContent = randomNum;
 let score = document.getElementById('nmb-blue').textContent = 0; //score set to 0
 const info = []; //array using to display users guess numbers
@@ -33,9 +35,9 @@ document.getElementById('btn-check').addEventListener('click', function () {
         return
     }
     //limit user pick numbers within the game rules and avoid number 0
-    if (input > 20 || input == 0) {
+    if (input > 25 || input == 0) {
         predictionNumber.value = '';
-        return displayText("Please pick number between 1-20");
+        return displayText("Please pick number between 1-25");
     }
 
     if (!input) {
@@ -61,9 +63,11 @@ document.getElementById('btn-check').addEventListener('click', function () {
     }
 
     //if user guess is higher or lower than random picked
+    if(score <=4){
     if (score !== randomNum) {
         document.getElementById('text').textContent = input > randomNum ? 'Your guess is too high' : 'Your guess is too low';
     }
+}
     // user lose game
     else {
         displayText('You lost');
@@ -79,7 +83,7 @@ document.getElementById('btn-check').addEventListener('click', function () {
 //function to playing again
 document.getElementById('btn-again').addEventListener('click', function () {
     score = document.getElementById('nmb-blue').textContent = 0;
-    randomNum = Math.trunc(Math.random() * 20) + 1;
+    randomNum = Math.trunc(Math.random() * 25) + 1;
     displayText('Start guessing...');
     predictionNumber.value = '';
     randomPick.textContent = '?';
