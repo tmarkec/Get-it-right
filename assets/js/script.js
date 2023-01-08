@@ -1,13 +1,14 @@
 /**landing page
  *  add user name input?! which will replicate in the score
  */
+
 const games = document.getElementById("game-box");
 const startBtn = document.getElementById("start-btn");
 startBtn.addEventListener("click", function () { //button hides page with rules
     games.classList.remove("hidden");
     document.getElementById("userN").innerHTML = document.getElementById("tbuser").value;
 });
-
+const sound = document.getElementById('btn-sound');
 // rundom number game page
 let userName = document.getElementById("userN")
 let randomNum = Math.trunc(Math.random() * 25) + 1; //creates random number between 1 -20
@@ -75,7 +76,10 @@ document.getElementById('btn-check').addEventListener('click', function () {
         randomPick.textContent = randomNum;
         randomPick.style.border = '0';
         document.getElementById('btn-check').disabled = true;
-        
+        sound.classList.remove('hidden');
+        sound.addEventListener("click", () => {
+            document.getElementById("sound").play();
+          });
     }
 
 });
