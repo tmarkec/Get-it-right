@@ -1,7 +1,7 @@
 /**landing page
  *  add user name input?! which will replicate in the score
- */
-
+ */let audio = document.getElementById("sound");
+audio.play();
 const games = document.getElementById("game-box");
 const startBtn = document.getElementById("start-btn");
 startBtn.addEventListener("click", function () { //button hides page with rules
@@ -38,7 +38,7 @@ document.getElementById('btn-check').addEventListener('click', function () {
     //limit user pick numbers within the game rules and avoid number 0
     if (input > 25 || input == 0) {
         predictionNumber.value = '';
-        return displayText("Please pick number between 1-25");
+        return displayText("Please pick number between 1-25!");
     }
 
     if (!input) {
@@ -55,23 +55,24 @@ document.getElementById('btn-check').addEventListener('click', function () {
 
     //user wins the game
     if (input === randomNum) {
-        displayText(`Well done! Your No. of guesses = ${score}`)
+        displayText(`Well done!!! Your No. of guesses = ${score}`)
         randomPick.textContent = randomNum;
         predictionNumber.value = '';
         randomPick.style.border = '0';
         document.getElementById('btn-check').disabled = true;
+        party.confetti(games);
         return
     }
 
     //if user guess is higher or lower than random picked
     if(score <=4){
     if (score !== randomNum) {
-        document.getElementById('text').textContent = input > randomNum ? 'Your guess is too high' : 'Your guess is too low';
+        document.getElementById('text').textContent = input > randomNum ? 'Your guess is too high!' : 'Your guess is too low!';
     }
 }
     // user lose game
     else {
-        displayText('You lost');
+        displayText(`You lost!!!  =>`);
         predictionNumber.value = '';
         randomPick.textContent = randomNum;
         randomPick.style.border = '0';

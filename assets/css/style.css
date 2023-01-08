@@ -130,8 +130,8 @@
     cursor:pointer;
     -add-webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
-    transform: scale(1.1);
-    transition: 1s ease;
+    transform: rotateY(360deg) scale(1.1);
+    transition: all 1.5s ease;
     background-color: aliceblue;
 }
 .score {
@@ -170,11 +170,11 @@
         text-align: center;
     }
 }
+/*500px*/
 @media screen and (max-width:500px) {
     .blur-box {
         max-width: 80%;
     }
-
     .head {
         font-size: 1.2rem;
     }
