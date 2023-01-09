@@ -1,4 +1,9 @@
+/*jshint esversion: 6*/
 //audio for win/lose
+const register = document.getElementById('register');
+
+const party = document.getElementById('body');
+
 const audioWin = document.getElementById("sound");
 
 const audioLose = document.getElementById("sound2");
@@ -13,7 +18,7 @@ let randomNum = Math.trunc(Math.random() * 25) + 1;
 
 let score = document.getElementById('nmb-blue').textContent = 0; 
 
-const info = []; 
+let info = []; 
 
 const predictionNumber = document.getElementById("prediction-number");
 
@@ -38,23 +43,23 @@ function validateUser() {
     if (validateUser()) {
       games.classList.remove("hidden");
       document.getElementById("userN").innerText = userName.value; 
-      predictionNumber.focus()
+      predictionNumber.focus();
     }
   });
 
 let displayText = function (text) {
-    document.getElementById('text').textContent = text
+    document.getElementById('text').textContent = text;
 };
 
 //game page - checking user
 document.getElementById('btn-check').addEventListener('click', function () {
     let input = +(document.getElementById('prediction-number').value);
-    //user input same as already picked one
+    //user input same as already picked one;
     if (info.includes(input)) {
-        displayText('Already tried this number!!!')
-        return
+        displayText('Already tried this number!!!');
+        return;
     }
-    //limit user pick numbers within the game rules and avoid number 0
+    //limit user pick numbers within the game rules and avoid number 0;
     if (input > 25 || input == 0) {
         predictionNumber.value = '';
         return displayText("Please pick number between 1-25!");
@@ -62,35 +67,35 @@ document.getElementById('btn-check').addEventListener('click', function () {
 
     if (!input) {
         displayText('Please type a number!!!');
-        return
+        return;
     }
 
-    score++
+    score++;
     document.getElementById('nmb-blue').textContent = score;
     info.push(input);
     redNumber.textContent = info;
     predictionNumber.value = '';
     
 
-    //user wins the game
+    //user wins the game;
     if (input === randomNum) {
-        displayText(`Well done ${userName.value} you won `)
+        displayText(`Well done ${userName.value} you won `);
         randomPick.textContent = randomNum;
         predictionNumber.value = '';
         randomPick.style.border = '0';
         party.confetti(games);
         audioWin.play();
-        return
+        return;
     }
 
-    //if user guess is higher or lower than random picked
+    //if user guess is higher or lower than random picked;
     if(score <=4){
     if (score !== randomNum) {
         document.getElementById('text').textContent = input > randomNum ? `${userName.value} try lower number!` : `${userName.value} try higher number!`;
     }
 }
 
-    // user lose game
+    // user lose game;
     else {
         displayText(`${userName.value} you lost!!!`);
         predictionNumber.value = '';
@@ -100,7 +105,7 @@ document.getElementById('btn-check').addEventListener('click', function () {
     }
 });
 
-//function to playing again
+//function to playing again;
 document.getElementById('btn-again').addEventListener('click', function () {
     score = document.getElementById('nmb-blue').textContent = 0;
     randomNum = Math.trunc(Math.random() * 25) + 1;
@@ -111,10 +116,10 @@ document.getElementById('btn-again').addEventListener('click', function () {
     info = [];
     redNumber.innerHTML = '';
     // document.getElementById('btn-check').disabled = false;
-})
+});
 
-//if user wish to read rules again or change user name
+//if user wish to read rules again or change user name;
 document.getElementById("btn-back").addEventListener("click", function () {
     games.classList.add("hidden");
-    userName.value = ""
+    userName.value = "";
   });
