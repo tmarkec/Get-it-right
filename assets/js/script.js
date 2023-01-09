@@ -9,7 +9,7 @@ const userName = document.getElementById("username");
 
 let randomNum = Math.trunc(Math.random() * 25) + 1; 
 
-document.getElementById('random-pick').textContent = randomNum;
+// document.getElementById('random-pick').textContent = randomNum;
 
 let score = document.getElementById('nmb-blue').textContent = 0; 
 
