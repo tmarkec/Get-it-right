@@ -1,6 +1,6 @@
 //audio for win/lose
 const audioWin = document.getElementById("sound");
-
+const audioLose = document.getElementById("sound2")
 const games = document.getElementById("game-box");
 
 const userName = document.getElementById("username")
@@ -17,7 +17,7 @@ const redNumber = document.getElementById('nmb-red');
 function validateUser() {
     let reg = /^[A-Za-z]+$/;
     if (userName.value == "" || !userName.value.match(reg)) {
-      alert("type user name");
+      alert("No numbers allowed");
       userName.focus();
       return false;
     } else {
@@ -29,7 +29,7 @@ function validateUser() {
     if (validateUser()) {
       games.classList.remove("hidden");
       document.getElementById("userN").innerText = userName.value; 
-      document.getElementById('btn-check').disabled= false; 
+       
     }
   });
 
@@ -65,11 +65,10 @@ document.getElementById('btn-check').addEventListener('click', function () {
 
     //user wins the game
     if (input === randomNum) {
-        displayText(`Well done!!! Your No. of guesses = ${score}`)
+        displayText(`Well done ${userName.value} you won `)
         randomPick.textContent = randomNum;
         predictionNumber.value = '';
         randomPick.style.border = '0';
-        document.getElementById('btn-check').disabled = true;
         party.confetti(games);
         audioWin.play();
         return
@@ -78,19 +77,17 @@ document.getElementById('btn-check').addEventListener('click', function () {
     //if user guess is higher or lower than random picked
     if(score <=4){
     if (score !== randomNum) {
-        document.getElementById('text').textContent = input > randomNum ? 'Your guess is too high!' : 'Your guess is too low!';
+        document.getElementById('text').textContent = input > randomNum ? `${userName.value} try lower number!` : `${userName.value} try higher number`;
     }
 }
     // user lose game
     else {
-        displayText(`You lost!!!  =>`);
+        displayText(`${userName.value} you lost!!!`);
         predictionNumber.value = '';
         randomPick.textContent = randomNum;
         randomPick.style.border = '0';
-        document.getElementById('btn-check').disabled = true;
-        
+        audioLose.play();     
     }
-
 });
 
 //function to playing again

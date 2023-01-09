@@ -32,10 +32,10 @@
                   value="Play"
                 /> -->
                 <form autocomplete="off" method="get" id="register">
-                    <label for="tbuser"> Username</label>
-                    <input type="text" name="username" id="username" class="user-label" required minlength="4" maxlength="10" />
-                    <button type="submit" id="startBtn" class="btn">Play</button>
-                  </form>
+                    <input type="text" name="username" id="username" class="user-label" required minlength="4"
+                        maxlength="10" />
+                    <button type="submit" id="startBtn" class="btn btn-play">Play</button>
+                </form>
             </div>
         </div>
         <div id="game-box" class="game hidden">
@@ -48,13 +48,10 @@
                     <div id="random-pick" class="random-number">?
                     </div>
                     <div id="text" class="random-text">Start guessing...</div>
-                    <button id="btn-sound" class="btn-sound hidden">
-                        <i class="fas fa-music"></i
-                            ><audio
-                              id="sound"
-                              src="/assets/js/images&sound/mixkit-small-group-clapping-475.wav"
-                            ></audio>
-                    </button>
+
+                    <audio id="sound" src="/assets/js/images&sound/mixkit-small-group-clapping-475.wav"></audio>
+                    <audio id="sound2" src="/assets/sounds/boo-sound.mp3"></audio>
+
                 </section>
                 <section class="prediction">
                     <input type="number" id="prediction-number" class="predictions" min="1">

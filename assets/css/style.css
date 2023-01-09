@@ -42,19 +42,18 @@
     font-size: 1.1rem;
     padding-bottom: 0.4rem;
 }
-.btn-start {
-    margin: 2rem;
+.user-label {
+    background-color: rgb(248, 212, 50);
+    border-radius: 10px;
+    margin: 5px;
+    min-height: 2rem;
+    margin: 0.5rem;
+    font-size: 1.3rem;
 }
-/* .active {
-    visibility: visible;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-.inactive {
-    visibility: hidden;
-    top: 0;
-    transform: translate(-50%, -50%) scale(0.1);
-  } */
+.user-label:hover {
+    border-color: red;
+}
+/* -------------- second page--game---------------*/
 .game {
     position: fixed;
     top: 0;
@@ -68,7 +67,7 @@
 .hidden {
     display: none;
   }
-  .game-container {
+.game-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -120,7 +119,7 @@
     font-weight: 600;
 }
 .btn {
-    margin: 1rem;
+    margin: 0.5rem;
     padding: 0.3rem 0.6rem;
     font-size: 1.4rem;
     border-radius: 8px;
