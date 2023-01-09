@@ -50,7 +50,7 @@ register.addEventListener("submit", function (evt) {
 let displayText = function (text) {
     document.getElementById('text').textContent = text;
 };
-
+//function to run the game
 function confirm() {
     let input = +(document.getElementById('prediction-number').value);
     //user input same as already picked one;
@@ -60,7 +60,7 @@ function confirm() {
         return;
     }
     //limit user pick numbers within the game rules and avoid number 0;
-    if (input > 25 || input == 0) {
+    if (input > 25 || input == 0 || input < 0) {
         predictionNumber.value = '';
         return displayText("Please pick number between 1-25!");
     }
@@ -107,8 +107,7 @@ function confirm() {
     }
 }
 
-//game page - checking user
-
+//game page - checking input
 document.getElementById('btn-check').addEventListener('click', function (e) {
     
     confirm();
