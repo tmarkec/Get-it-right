@@ -44,12 +44,17 @@
 }
 .user-label {
     background-color: rgb(52, 94, 209);
+    text-align: center;
     color: #F1F7ED;
     border-radius: 10px;
     min-height: 2rem;
     margin: 0.5rem;
     font-size: 1.3rem;
     max-width: 12rem;
+}
+.user-label::placeholder {
+    color: #F1F7ED;
+    opacity: .5;
 }
 .user-label:hover {
     border-color: rgb(250, 247, 60);   
@@ -90,7 +95,7 @@
     text-align: center;
     margin: 1rem 2rem;
     border: 2px solid black;
-    border-radius: 40%;
+    border-radius: 50%;
     padding:0.5rem;
     height: 3rem;
     width: 3rem;
@@ -102,6 +107,7 @@
     font-weight: 600;
     margin: 1rem 2rem;   
 }
+/*predicted number----*/
 .prediction {
     display: flex;
     flex-direction: column;
@@ -138,6 +144,7 @@
     display: flex;
     justify-content: space-around;
 }
+/*bottom section tries, displayed numbers, buttons*/
 .score {
     display: flex;
     align-items: center;

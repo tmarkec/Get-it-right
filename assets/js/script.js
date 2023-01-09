@@ -1,5 +1,7 @@
 /*jshint esversion: 6*/
 //audio for win/lose
+
+
 const register = document.getElementById('register');
 
 const audioWin = document.getElementById("sound");
@@ -10,11 +12,13 @@ const games = document.getElementById("game-box");
 
 const userName = document.getElementById("username");
 
-let randomNum = Math.trunc(Math.random() * 25) + 1; 
+let randomNum = Math.trunc(Math.random() * 25) + 1;
 
-let score = document.getElementById('nmb-blue').textContent = 0; 
+document.getElementById("random-pick").textContent = randomNum; 
 
-let info = []; 
+let score = document.getElementById('nmb-blue').textContent = 0;
+
+let info = [];
 
 const predictionNumber = document.getElementById("prediction-number");
 
@@ -27,32 +31,30 @@ const redNumber = document.getElementById('nmb-red');
 function validateUser() {
     let reg = /^[A-Za-z]+$/;
     if (userName.value == "" || !userName.value.match(reg)) {
-      alert("No numbers allowed");
-      userName.focus();
-      return false;
+        alert("No numbers allowed");
+        userName.focus();
+        return false;
     } else {
-      return true;
+        return true;
     }
-  }
-  register.addEventListener("submit", function (evt) {
+}
+register.addEventListener("submit", function (evt) {
     evt.preventDefault();
     if (validateUser()) {
-      games.classList.remove("hidden");
-      document.getElementById("userN").innerText = userName.value; 
-      predictionNumber.focus();
+        games.classList.remove("hidden");
+        document.getElementById("userN").innerText = userName.value;
+        predictionNumber.focus();
     }
-  });
+});
 
 let displayText = function (text) {
     document.getElementById('text').textContent = text;
 };
 
-//game page - checking user
-document.getElementById('btn-check').addEventListener('click', function () {
-
-   
+function confirm() {
     let input = +(document.getElementById('prediction-number').value);
     //user input same as already picked one;
+    predictionNumber.focus()
     if (info.includes(input)) {
         displayText('Already tried this number!!!');
         return;
@@ -73,7 +75,7 @@ document.getElementById('btn-check').addEventListener('click', function () {
     info.push(input);
     redNumber.textContent = info;
     predictionNumber.value = '';
-    
+
 
     //user wins the game;
     if (input === randomNum) {
@@ -83,15 +85,16 @@ document.getElementById('btn-check').addEventListener('click', function () {
         randomPick.style.border = '0';
         party.confetti(games);
         audioWin.play();
+        document.getElementById('btn-check').disabled = true;
         return;
     }
 
     //if user guess is higher or lower than random picked;
-    if(score <=4){
-    if (score !== randomNum) {
-        document.getElementById('text').textContent = input > randomNum ? `${userName.value} try lower number!` : `${userName.value} try higher number!`;
+    if (score <= 4) {
+        if (score !== randomNum) {
+            document.getElementById('text').textContent = input > randomNum ? `${userName.value} try lower number!` : `${userName.value} try higher number!`;
+        }
     }
-}
 
     // user lose game;
     else {
@@ -99,7 +102,20 @@ document.getElementById('btn-check').addEventListener('click', function () {
         predictionNumber.value = '';
         randomPick.textContent = randomNum;
         randomPick.style.border = '0';
-        audioLose.play();     
+        audioLose.play();
+        document.getElementById('btn-check').disabled = true;
+    }
+}
+
+//game page - checking user
+
+document.getElementById('btn-check').addEventListener('click', function (e) {
+    
+    confirm();
+});
+document.getElementById("btn-check").addEventListener("keydown", function (evt) {
+    if (evt.key === "Enter") {
+        confirm();
     }
 });
 
@@ -113,11 +129,11 @@ document.getElementById('btn-again').addEventListener('click', function () {
     document.body.style.background = 'white';
     info = [];
     redNumber.innerHTML = '';
-    // document.getElementById('btn-check').disabled = false;
+    document.getElementById('btn-check').disabled = false;
 });
 
 //if user wish to read rules again or change user name;
 document.getElementById("btn-back").addEventListener("click", function () {
     games.classList.add("hidden");
     userName.value = "";
-  });
+});
