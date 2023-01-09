@@ -1,18 +1,27 @@
 //audio for win/lose
 const audioWin = document.getElementById("sound");
-const audioLose = document.getElementById("sound2")
+
+const audioLose = document.getElementById("sound2");
+
 const games = document.getElementById("game-box");
 
-const userName = document.getElementById("username")
-//creates random number between 1 - 25
+const userName = document.getElementById("username");
+
 let randomNum = Math.trunc(Math.random() * 25) + 1; 
+
 document.getElementById('random-pick').textContent = randomNum;
+
 let score = document.getElementById('nmb-blue').textContent = 0; 
-//display user guessed numbers
+
 const info = []; 
+
 const predictionNumber = document.getElementById("prediction-number");
+
 const randomPick = document.getElementById('random-pick');
+
 const redNumber = document.getElementById('nmb-red');
+
+
 //landing page user validation
 function validateUser() {
     let reg = /^[A-Za-z]+$/;
@@ -77,7 +86,7 @@ document.getElementById('btn-check').addEventListener('click', function () {
     //if user guess is higher or lower than random picked
     if(score <=4){
     if (score !== randomNum) {
-        document.getElementById('text').textContent = input > randomNum ? `${userName.value} try lower number!` : `${userName.value} try higher number`;
+        document.getElementById('text').textContent = input > randomNum ? `${userName.value} try lower number!` : `${userName.value} try higher number!`;
     }
 }
     // user lose game
@@ -101,5 +110,8 @@ document.getElementById('btn-again').addEventListener('click', function () {
     info = [];
     redNumber.innerHTML = '';
     // document.getElementById('btn-check').disabled = false;
-    
 })
+//if user wish to read rules again or change user name
+document.getElementById("btn-back").addEventListener("click", function () {
+    games.classList.add("hidden");
+  });

@@ -22,15 +22,6 @@
                     <li>Not happy with your performance, you can always "Play again"</li>
                     <li>Type your username bellow and lets get you started!!!</li>
                 </ol>
-                <!-- <label for="tbuser"> Username</label>
-                <input type="text" name="username" id="tbuser" class="user-label" maxlength="10" />
-                <input
-                  type="button"
-                  id="start-btn"
-                  class="btn"
-                  onclick="passValue()"
-                  value="Play"
-                /> -->
                 <form autocomplete="off" method="get" id="register">
                     <input type="text" name="username" id="username" class="user-label" required minlength="4"
                         maxlength="10" />
@@ -49,7 +40,7 @@
                     </div>
                     <div id="text" class="random-text">Start guessing...</div>
 
-                    <audio id="sound" src="/assets/js/images&sound/mixkit-small-group-clapping-475.wav"></audio>
+                    <audio id="sound" src="/assets/sounds/mixkit-small-group-clapping-475.wav"></audio>
                     <audio id="sound2" src="/assets/sounds/boo-sound.mp3"></audio>
 
                 </section>
@@ -62,7 +53,10 @@
                     <p class="highscore"><span id="userN"> </span> tried <span id="nmb-blue"></span> times!</p>
                     <p class="life">Numbers you tried so far: <span id="nmb-red"> </span></p>
                 </section>
+                <section class="buttons">
                 <button id="btn-again" class="btn">Play again</button>
+                <button id="btn-back" class="btn">Go back</button>
+            </section>
             </div>
         </div>
     </div>
