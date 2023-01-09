@@ -5,20 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guess random number game">
+    <meta name="description" content="Get it right">
     <meta name="keywords" content="game, numbers, random pick">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
 
-<body id="body">
+<body>
     <div class="background">
+        <!-- Landing page with rules -->
         <div id="welcome-box" class="welcome">
             <div id="blur" class="blur-box">
                 <h1>Get it right!!!</h1>
                 <ol>
-                    <li>Try to guess random number from 1-25 using your luck skills!</li>
-                    <li>You only have 5 tries for game!</li>
+                    <li>Try to guess random number from 1-25 with the little bit luck!</li>
+                    <li>You only have 5 tries per game!</li>
                     <li>Not happy with your performance, you can always "Play again"!</li>
                     <li>Type your "Name" bellow and lets get you started!!!</li>
                 </ol>
@@ -29,39 +30,38 @@
                 </form>
             </div>
         </div>
+        <!-- Second - game page -->
         <div id="game-box" class="game hidden">
             <div class="game-container">
                 <header class="head">
                     <h1>Think of the number between 1 - 25?!</h1>
-                    <!-- I'm thinking of a number between 1 - 25 -->
                 </header>
                 <div class="random">
                     <div id="random-pick" class="random-number">?
                     </div>
                     <div id="text" class="random-text">Start guessing...</div>
-
                     <audio id="sound" src="assets/sounds/mixkit-small-group-clapping-475.wav"></audio>
                     <audio id="sound2" src="assets/sounds/boo-sound.mp3"></audio>
-
                 </div>
                 <div class="prediction">
                     <input type="number" id="prediction-number" class="predictions" min="1">
-                    <button id="btn-check" class="btn">Check</button>
+                    <button type="submit" id="btn-check" class="btn">Check</button>
                 </div>
                 <div class="score">
-                    <!-- try different approach, change lifes/score in simple version -->
-                    <p class="highscore"><span id="userN" class="user-name"> </span> tried <span id="nmb-blue" class="nmbB"></span> times!</p>
+                    <p class="highscore"><span id="userN" class="user-name"> </span> tried <span id="nmb-blue"
+                            class="nmbB"></span> times!</p>
                     <p class="life">Numbers you tried so far: <span id="nmb-red" class="nmbR"> </span></p>
                 </div>
                 <div class="buttons">
-                <button id="btn-again" class="btn">Play again</button>
-                <button id="btn-back" class="btn">Go back</button>
-            </div>
+                    <button id="btn-again" class="btn">Play again</button>
+                    <button id="btn-back" class="btn">Go back</button>
+                </div>
             </div>
         </div>
     </div>
-    <script src="https://kit.fontawesome.com/cccdb242ea.js" crossorigin="anonymous"></script>
+    <!-- Script - confetti animation -->
     <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+    <!-- Java script -->
     <script src="assets/js/script.js"></script>
 </body>
 

@@ -1,7 +1,6 @@
 /*jshint esversion: 6*/
-//audio for win/lose
 
-
+//variables
 const register = document.getElementById('register');
 
 const audioWin = document.getElementById("sound");
@@ -14,7 +13,7 @@ const userName = document.getElementById("username");
 
 let randomNum = Math.trunc(Math.random() * 25) + 1;
 
-document.getElementById("random-pick").textContent = randomNum; 
+document.getElementById("random-pick").textContent = randomNum;
 
 let score = document.getElementById('nmb-blue').textContent = 0;
 
@@ -50,6 +49,7 @@ register.addEventListener("submit", function (evt) {
 let displayText = function (text) {
     document.getElementById('text').textContent = text;
 };
+
 //function to run the game
 function confirm() {
     let input = +(document.getElementById('prediction-number').value);
@@ -65,11 +65,6 @@ function confirm() {
         return displayText("Please pick number between 1-25!");
     }
 
-    if (!input) {
-        displayText('Please type a number!!!');
-        return;
-    }
-
     score++;
     document.getElementById('nmb-blue').textContent = score;
     info.push(input);
@@ -79,7 +74,7 @@ function confirm() {
 
     //user wins the game;
     if (input === randomNum) {
-        displayText(`Well done ${userName.value} you won `);
+        displayText(`Well done ${userName.value} you won`);
         randomPick.textContent = randomNum;
         predictionNumber.value = '';
         randomPick.style.border = '0';
@@ -89,7 +84,7 @@ function confirm() {
         return;
     }
 
-    //if user guess is higher or lower than random picked;
+    //if user guess is higher or lower than random picked number;
     if (score <= 4) {
         if (score !== randomNum) {
             document.getElementById('text').textContent = input > randomNum ? `${userName.value} try lower number!` : `${userName.value} try higher number!`;
@@ -107,18 +102,18 @@ function confirm() {
     }
 }
 
-//game page - checking input
+//game page - checking user input
 document.getElementById('btn-check').addEventListener('click', function (e) {
-    
     confirm();
 });
+//not working at the moment
 document.getElementById("btn-check").addEventListener("keydown", function (evt) {
     if (evt.key === "Enter") {
         confirm();
     }
 });
 
-//function to playing again;
+//function to playing game again;
 document.getElementById('btn-again').addEventListener('click', function () {
     score = document.getElementById('nmb-blue').textContent = 0;
     randomNum = Math.trunc(Math.random() * 25) + 1;

@@ -1,24 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
 * {
     margin: 0 auto;
-    padding: 0; 
+    padding: 0;
     font-family: 'Shadows Into Light', cursive;
+
 }
+
 .background {
     height: 100%;
-    width: 100%;    
+    width: 100%;
 }
+
 /* ----------------landing page-------------*/
-.welcome {  
+.welcome {
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #fff;
     height: 100vh;
-    width: 100vw;  
+    width: 100vw;
     background-image: url(../images/background.jpg);
 }
-.blur-box { 
+
+.blur-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,6 +35,7 @@
     background-color: #F1F7ED;
     box-shadow: 4px 4px 8px black;
 }
+
 .blur-box h1 {
     font-size: 1.6rem;
     text-align: center;
@@ -37,13 +43,16 @@
     padding: 0.2rem;
     margin-bottom: 1rem;
 }
+
 .blur-box ol {
     margin: 1rem 0.5rem;
 }
+
 .blur-box ol li {
     font-size: 1.1rem;
     padding-bottom: 0.4rem;
 }
+
 .user-label {
     background-color: rgb(52, 94, 209);
     text-align: center;
@@ -54,13 +63,16 @@
     font-size: 1.3rem;
     max-width: 12rem;
 }
+
 .user-label::placeholder {
     color: #F1F7ED;
     opacity: .5;
 }
+
 .user-label:hover {
-    border-color: rgb(250, 247, 60);   
+    border-color: rgb(250, 247, 60);
 }
+
 /* -------------- second page--game---------------*/
 .game {
     position: fixed;
@@ -72,50 +84,58 @@
     overflow: visible;
     background-image: radial-gradient(circle farthest-side, #fceabb, #f8b500);
 }
+
 .hidden {
     display: none;
-  }
+}
+
 .game-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 1rem;
-  }
+}
+
 .head {
     font-size: 1.4rem;
     padding-top: 1rem;
 }
+/*random div*/
 .random {
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin: 1rem;
 }
+
 .random-number {
     align-items: center;
     text-align: center;
     margin: 1rem 2rem;
     border: 2px solid black;
     border-radius: 50%;
-    padding:0.5rem;
+    padding: 0.5rem;
     height: 3rem;
     width: 3rem;
     font-size: 2.8rem;
     font-weight: 800;
 }
+
 .random-text {
     font-size: 1.8rem;
     font-weight: 600;
-    margin: 1rem 2rem;   
+    margin: 1rem 2rem;
 }
+
 /*predicted number----*/
 .prediction {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
+
 .predictions {
     text-align: center;
     margin: 1rem auto;
@@ -127,26 +147,30 @@
     font-size: 3rem;
     font-weight: 600;
 }
+/*buttons*/
 .btn {
     margin: 0.5rem;
     padding: 0.3rem 0.6rem;
     font-size: 1.4rem;
     border-radius: 8px;
-    box-shadow: 3px 3px 7px grey ;
+    box-shadow: 3px 3px 7px grey;
 }
+
 .btn:hover {
-    cursor:pointer;
+    cursor: pointer;
     -add-webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: rotateY(360deg) scale(1.1);
     transition: all 1.5s ease;
     background-color: aliceblue;
 }
+
 .buttons {
     display: flex;
     justify-content: space-around;
 }
-/*bottom section tries, displayed numbers, buttons*/
+
+/*bottom section tries, displayed numbers,*/
 .score {
     display: flex;
     align-items: center;
@@ -154,49 +178,64 @@
     margin: 1rem;
     width: 70%;
 }
+
 .highscore {
     margin: 1rem 2rem 1rem 1rem;
     font-size: 1.3rem;
 }
+
 .life {
     font-size: 1.3rem;
     margin: 1rem 1rem 1rem 2rem;
 }
+
 .user-name {
     font-weight: bold;
 }
+
 .nmbB {
     color: rgba(26, 17, 152, 0.888);
     font-size: 1.4rem;
     font-weight: bold;
 }
+
 .nmbR {
     color: rgba(255, 0, 0, 0.721);
     font-size: 1.4rem;
     font-weight: bold;
 }
 
-/*media querry*/
+/*----------media querry---------------------*/
 
 /*800px*/
 @media screen and (max-width:800px) {
     .blur-box {
         max-width: 70%;
     }
+
     .head {
         font-size: 1.3rem;
         text-align: center;
     }
 }
+
 /*500px*/
 @media screen and (max-width:500px) {
     .blur-box {
         max-width: 80%;
     }
+
     .head {
         font-size: 1.2rem;
     }
+
     .random-text {
         font-size: 1.6rem;
+    }
+}
+/*400px*/
+@media screen and (max-width:400px) {
+    .game-container {
+        margin: 0;
     }
 }
