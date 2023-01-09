@@ -2,8 +2,6 @@
 //audio for win/lose
 const register = document.getElementById('register');
 
-const party = document.getElementById('body');
-
 const audioWin = document.getElementById("sound");
 
 const audioLose = document.getElementById("sound2");
