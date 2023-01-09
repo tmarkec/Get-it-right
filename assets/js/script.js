@@ -38,7 +38,7 @@ function validateUser() {
     if (validateUser()) {
       games.classList.remove("hidden");
       document.getElementById("userN").innerText = userName.value; 
-       
+      predictionNumber.focus()
     }
   });
 
@@ -64,13 +64,13 @@ document.getElementById('btn-check').addEventListener('click', function () {
         displayText('Please type a number!!!');
         return
     }
+
     score++
     document.getElementById('nmb-blue').textContent = score;
     info.push(input);
     redNumber.textContent = info;
-    predictionNumber.value = ''
-    predictionNumber.focus();
-
+    predictionNumber.value = '';
+    
 
     //user wins the game
     if (input === randomNum) {
@@ -89,6 +89,7 @@ document.getElementById('btn-check').addEventListener('click', function () {
         document.getElementById('text').textContent = input > randomNum ? `${userName.value} try lower number!` : `${userName.value} try higher number!`;
     }
 }
+
     // user lose game
     else {
         displayText(`${userName.value} you lost!!!`);
@@ -111,7 +112,9 @@ document.getElementById('btn-again').addEventListener('click', function () {
     redNumber.innerHTML = '';
     // document.getElementById('btn-check').disabled = false;
 })
+
 //if user wish to read rules again or change user name
 document.getElementById("btn-back").addEventListener("click", function () {
     games.classList.add("hidden");
+    userName.value = ""
   });
