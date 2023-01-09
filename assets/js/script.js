@@ -12,8 +12,6 @@ const userName = document.getElementById("username");
 
 let randomNum = Math.trunc(Math.random() * 25) + 1; 
 
-// document.getElementById('random-pick').textContent = randomNum;
-
 let score = document.getElementById('nmb-blue').textContent = 0; 
 
 let info = []; 
@@ -51,6 +49,8 @@ let displayText = function (text) {
 
 //game page - checking user
 document.getElementById('btn-check').addEventListener('click', function () {
+
+   
     let input = +(document.getElementById('prediction-number').value);
     //user input same as already picked one;
     if (info.includes(input)) {

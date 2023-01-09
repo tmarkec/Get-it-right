@@ -24,7 +24,7 @@
                 </ol>
                 <form autocomplete="off" method="get" id="register">
                     <input type="text" name="username" id="username" class="user-label" required minlength="4"
-                        maxlength="10" />
+                        maxlength="10" >
                     <button type="submit" id="startBtn" class="btn btn-play">Play</button>
                 </form>
             </div>
@@ -35,7 +35,7 @@
                     <h1>Think of the number between 1 - 25?!</h1>
                     <!-- I'm thinking of a number between 1 - 25 -->
                 </header>
-                <section class="random">
+                <div class="random">
                     <div id="random-pick" class="random-number">?
                     </div>
                     <div id="text" class="random-text">Start guessing...</div>
@@ -43,20 +43,20 @@
                     <audio id="sound" src="assets/sounds/mixkit-small-group-clapping-475.wav"></audio>
                     <audio id="sound2" src="assets/sounds/boo-sound.mp3"></audio>
 
-                </section>
-                <section class="prediction">
+                </div>
+                <div class="prediction">
                     <input type="number" id="prediction-number" class="predictions" min="1">
                     <button id="btn-check" class="btn">Check</button>
-                </section>
-                <section class="score">
+                </div>
+                <div class="score">
                     <!-- try different approach, change lifes/score in simple version -->
                     <p class="highscore"><span id="userN" class="user-name"> </span> tried <span id="nmb-blue" class="nmbB"></span> times!</p>
                     <p class="life">Numbers you tried so far: <span id="nmb-red" class="nmbR"> </span></p>
-                </section>
-                <section class="buttons">
+                </div>
+                <div class="buttons">
                 <button id="btn-again" class="btn">Play again</button>
                 <button id="btn-back" class="btn">Go back</button>
-            </section>
+            </div>
             </div>
         </div>
     </div>
