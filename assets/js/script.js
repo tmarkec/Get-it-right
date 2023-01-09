@@ -1,33 +1,43 @@
-/**landing page
- *  add user name input?! which will replicate in the score
- */let audio = document.getElementById("sound");
-audio.play();
+//audio for win/lose
+const audioWin = document.getElementById("sound");
+
 const games = document.getElementById("game-box");
-const startBtn = document.getElementById("start-btn");
-startBtn.addEventListener("click", function () { //button hides page with rules
-    games.classList.remove("hidden");
-    document.getElementById("userN").innerHTML = document.getElementById("tbuser").value;
-});
-const sound = document.getElementById('btn-sound');
-// rundom number game page
-let userName = document.getElementById("userN")
-let randomNum = Math.trunc(Math.random() * 25) + 1; //creates random number between 1 -20
+
+const userName = document.getElementById("username")
+//creates random number between 1 - 25
+let randomNum = Math.trunc(Math.random() * 25) + 1; 
 document.getElementById('random-pick').textContent = randomNum;
-let score = document.getElementById('nmb-blue').textContent = 0; //score set to 0
-const info = []; //array using to display users guess numbers
+let score = document.getElementById('nmb-blue').textContent = 0; 
+//display user guessed numbers
+const info = []; 
 const predictionNumber = document.getElementById("prediction-number");
 const randomPick = document.getElementById('random-pick');
 const redNumber = document.getElementById('nmb-red');
-// function getRandomNmb (){
-//     return Math.trunc(Math.random() * 20) + 1;
-// }
-// getRandomNmb()
+//landing page user validation
+function validateUser() {
+    let reg = /^[A-Za-z]+$/;
+    if (userName.value == "" || !userName.value.match(reg)) {
+      alert("type user name");
+      userName.focus();
+      return false;
+    } else {
+      return true;
+    }
+  }
+  register.addEventListener("submit", function (evt) {
+    evt.preventDefault();
+    if (validateUser()) {
+      games.classList.remove("hidden");
+      document.getElementById("userN").innerText = userName.value; 
+      document.getElementById('btn-check').disabled= false; 
+    }
+  });
+
 let displayText = function (text) {
     document.getElementById('text').textContent = text
 };
-/**function for checking user input
- * with different outcomes
- */
+
+//game page - checking user
 document.getElementById('btn-check').addEventListener('click', function () {
     let input = +(document.getElementById('prediction-number').value);
     //user input same as already picked one
@@ -61,6 +71,7 @@ document.getElementById('btn-check').addEventListener('click', function () {
         randomPick.style.border = '0';
         document.getElementById('btn-check').disabled = true;
         party.confetti(games);
+        audioWin.play();
         return
     }
 
@@ -77,10 +88,7 @@ document.getElementById('btn-check').addEventListener('click', function () {
         randomPick.textContent = randomNum;
         randomPick.style.border = '0';
         document.getElementById('btn-check').disabled = true;
-        sound.classList.remove('hidden');
-        sound.addEventListener("click", () => {
-            document.getElementById("sound").play();
-          });
+        
     }
 
 });
@@ -95,6 +103,6 @@ document.getElementById('btn-again').addEventListener('click', function () {
     document.body.style.background = 'white';
     info = [];
     redNumber.innerHTML = '';
-    document.getElementById('btn-check').disabled = false;
-    // bntCheck.removeAttribute('disabled');
+    // document.getElementById('btn-check').disabled = false;
+    
 })

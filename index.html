@@ -22,7 +22,7 @@
                     <li>Not happy with your performance, you can always "Play again"</li>
                     <li>Type your username bellow and lets get you started!!!</li>
                 </ol>
-                <label for="tbuser"> Username</label>
+                <!-- <label for="tbuser"> Username</label>
                 <input type="text" name="username" id="tbuser" class="user-label" maxlength="10" />
                 <input
                   type="button"
@@ -30,8 +30,12 @@
                   class="btn"
                   onclick="passValue()"
                   value="Play"
-                />
-               
+                /> -->
+                <form autocomplete="off" method="get" id="register">
+                    <label for="tbuser"> Username</label>
+                    <input type="text" name="username" id="username" class="user-label" required minlength="4" maxlength="10" />
+                    <button type="submit" id="startBtn" class="btn">Play</button>
+                  </form>
             </div>
         </div>
         <div id="game-box" class="game hidden">
