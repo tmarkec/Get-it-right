@@ -137,4 +137,5 @@ document.getElementById("btn-back").addEventListener("click", function () {
     games.classList.add("hidden");
     userName.value = "";
     copyright.classList.remove("black");
+    displayText('Start guessing...');
 });
