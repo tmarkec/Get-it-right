@@ -282,3 +282,62 @@ The website was tested on the following browsers:
 <details><summary>Screenshots</summary>
 <img src="./readImg/back.png">
 </details>
+
+## Bugs
+
+| **Bug**                                                                                                         | **Fix**                                                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Could not put button "check" in able position after the game was finished. When you finish game it is disabled! | Created function outside clickevent and called that function inside clickevent, and add propartie .disabled to true/ false depend on the progress of the game |
+| Background image did not load on live pages, but localy it did                                                  | Change file path in my html file to ../ and skip assets folder                                                                                                |
+| You could have type and chose negative numbers in input field                                                   | Created if else stateman with parametars, and add min value in html file                                                                                      |
+| Sound for winning or loosing the game was only replicated on click of the button                                | Created variables outside function which calls html audio element, and placed it inside if else statemants with and added .play() to the variables            |
+| Overall score/tries attempt where only displayed after second click                                             | Incrementer score ++ was put in front of if else statemants                                                                                                   |
+| The landing page on smaller screen sizes looked small and long                                                  | Increase max-width of the div element for smaller screens                                                                                                     |
+| On input field in the game by pressing "Enter" on the keyboard nothing happend.                                 | Instead of targeting "check" button with function, I've targeted input field itself and added function that check user input                                  |
+| Standard pop-up alert window!                                                                                   | Used outside library and code from "sweet alert"                                                                                                              |
+| 2 undefined variable in jshint | Still present as both variables are used from outside source to implement confetti animation and for alert window which script tags are places in HTML. They do not interfere with game performance.
+
+## Deployment
+
+The website was deployed using GitHub Pages by following these steps:
+
+1. In the GitHub repository navigate to the Settings tab
+2. On the left-hand menu select Pages
+3. For the source select Branch: master
+4. After the webpage refreshes automatically you will ses a ribbon on the top saying: "Your site is published at https://tmarkec.github.io/Get-it-right/
+
+You can fork the repository by following these steps:
+
+1. Go to the GitHub repository
+2. Click on Fork button in the upper right hand corner
+
+You can clone the repository by following these steps:
+
+1. Go to the GitHub repository
+2. Locate the Code button above the list of files and click it
+3. Select if you prefer to clone using HTTPS, SSH, or Github CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+   7.Press Enter to create your local clone.
+
+## Credits
+
+- Code & Content
+  - I give credits to [Stack overflow](https://www.stackoverflow.com/), [MDN Web Docs](https://developer.mozilla.org/en-US/) & [W3 Schools](https://www.w3schools.com/) for helping me resolve issues with my HTML, CSS & JS while coding through
+  - Inspiration for my game came from [codeduck](https://www.youtube.com/@TheCodeDuck) and [brocode](https://www.youtube.com/@BroCodez) youtube channels
+  - Credits for validating user on lanidng page goes to [w3resource](https://www.w3resource.com/javascript/form/letters-numbers-field.php)
+  - Credits for alert window in the Landing page goes to [SweetAlert](https://sweetalert.js.org/guides/) which code I used and copied to my JS:
+  "swal({title: "", className: ""
+          });"
+- Media
+  - Credit for my images accross the website goes to [Unsplash](https://unsplash.com/) which I used as a background image on the landing page
+  - For my logo I give credit to [App-logo](https://app.logo.com/) for easily generating my idea and automaticly creating logo for my website
+  - Credit for my sound effects after playing the game goes to [Mixkit](https://mixkit.co/)
+  - instructions how to create my favicon came from [MDN Web Docs](https://developer.mozilla.org/en-US/)
+  - credit for confetti animation after succesfully completing the game goes to [CSS Script](https://www.cssscript.com/confetti-animation-party/) which code I copied in my JS: "party.confetti(element);"
+- Acknowledgment
+  - Special thank you goes to mentor Jubril Akolade who helped me to finish my project
+  - I would like to thank tuttor support from Code Institue for their help, as well as whole Code Institue for giving me opportunity to attend this course and to work on this project
+  - I would also like to thank my collegaues for their support especially Dimmie Egberipour, and my friend Dominik Dragicevic
+  - Last but not least I would like to thank our coordinator Irene from Code Institute for giving guidance and schedules on daily basis in the classroom
