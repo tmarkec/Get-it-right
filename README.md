@@ -35,3 +35,16 @@
 8. [Deployment](#deployment)
 9. [Credits](#credits)
 10. [Acknowledgments](#acknowledgments)
+
+## Project Goals
+Get it right, is classic "chance"game in which user is trying to predict random number generated from computer with limited attempts on the line. Numbers are in the range from 1 - 25!
+
+### User Goals
+
+- Play fun game, that requires minumum effort and it's easy to understand and play
+
+### Site Owner Goals
+
+- Creating engaging game that users would want to come back and play again
+- Creating user friendly game
+- The game should be fully responsive to be able to be played on different screen sizes.
