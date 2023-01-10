@@ -48,3 +48,28 @@ Get it right, is classic "chance"game in which user is trying to predict random 
 - Creating engaging game that users would want to come back and play again
 - Creating user friendly game
 - The game should be fully responsive to be able to be played on different screen sizes.
+
+## User Experience
+
+### Target Audience
+
+- casual gamers
+- people who like to play "chance"games
+- people looking to test their luck skills
+
+### User Requirements and Expectations
+
+- A simple and friendly use interface
+- Quick & easy game to play
+- Buttons and functions that work as expected
+- Accesabillity and good design on all screen devices
+
+### User Stories
+
+1. As a user, I want to be able to create user name for the game
+2. As a user, I want to test my luck in this game
+3. As a user, I want to be able to pick the numbers both by clicking the mouse and by using the keyboard
+4. As a user, I want to be able to pick only numbers that are in the range of the rules of the game
+5. As a user, I want indication if my guesses were higher or lower than the random pick by computer
+6. As a user, I want to know when I win or lose game and in both cases that winning or loosing number is clearly displayed on the screen
+7. As a user, I want to be able to change my username and start new game
