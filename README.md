@@ -125,36 +125,64 @@ The site consists of two pages.
 
 ### Welcome page
 
-  - Provides user with rules of the game
-  - Provides user to type his name which will be displayed on the gaming page next to his score
-  <details><summary>Welcome page</summary>
+<details><summary>Welcome page</summary>
 <img src="./readImg/landing.page.png"></details>
 
+  <details><summary>Rules</summary>
+<img src="./readImg/RULES.png"></details>
+
+  - Provides user with rules of the game
+  <details><summary>Input field</summary>
+<img src="./readImg/input.name.png"></details>
+
+  - Provides user to type his name which will be displayed on the gaming page next to his score with button for user to start to play the game
 ### Game page
 
-- Clear headline with indication for the range of the guessing numbers
-- Question mark is where number will be displayed if user wins/lose the game, with text right next to it which guides user through the game as he plays
-- Input box so user can put his prediction and to check his input with button just bellow it
-- Clear indication on how many tries user got, and numbers that he already picked
-- Button to play again the game and button to go back to previous page if user wish to read rules or change his username
-<details><summary>Welcome page</summary>
+<details><summary>Game page</summary>
 <img src="./readImg/gaming.page.png"></details>
 
+<details><summary>Range of numbers</summary>
+<img src="./readImg/range.png"></details>
+
+- Clear headline with indication for the range of the guessing numbers
+
+<details><summary>Computer random number with text</summary>
+<img src="./readImg/guess.png"></details>
+
+- Question mark is where number will be displayed if user wins/lose the game, with text right next to it which guides user through the game as he plays
+
+<details><summary>User input number</summary>
+<img src="./readImg/input.field.nmb.png"></details>
+
+- Input box so user can put his prediction and to check his input with button just bellow it
+<details><summary>User info</summary>
+<img src="./readImg/text.users.png"></details>
+
+- Clear indication on how many tries user got, and numbers that he already picked
+<details><summary>Buttons to play again or to go back </summary>
+<img src="./readImg/back.png"></details>
+
+- Button to play again the game and button to go back to previous page if user wish to read rules or change his username
+
 #### Game over screen
+
+<details><summary>Gameover screen</summary>
+<img src="./readImg/user.lost.game.png"></details>
 
 - Gives user clear message that tells him that he lost the game, with the correct number right next to it
 - it also desibles "check" button so user can't click again and try the correct number
 - also sound button appears on the screen which user can click and get that famous "booo" sound for his performance
-<details><summary>Gameover screen</summary>
-<img src="./readImg/user.lost.game.png"></details>
+
 
 #### Correct guess screen
+
+<details><summary>Win screen</summary>
+<img src="./readImg/user.won.game.png"></details>
 
 - Gives user clear message that tells him that he won the game, with the correct number right next to it
 - it also desibles "check" button so user can't click on it again with different number
 - Upon win confetti animation is displayed around input label for user guess
-<details><summary>Win screen</summary>
-<img src="./readImg/user.won.game.png"></details>
+
 
 ## Validation
 
