@@ -224,11 +224,11 @@
 /*--------------footer ----------------*/
 .copyright {
     text-align: center;
-    font-size: 1.2rem;
+    /* font-size: 1.1rem; */
     background-color: #f8b500;
     color: black;
-    padding-bottom: 1rem;
-    max-height: 1.4rem;
+    padding-bottom: 0.5rem;
+    max-height: 1.2rem;
     position: fixed;
     bottom: 0;
     width: 100%;
