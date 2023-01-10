@@ -73,3 +73,27 @@ Get it right, is classic "chance"game in which user is trying to predict random 
 5. As a user, I want indication if my guesses were higher or lower than the random pick by computer
 6. As a user, I want to know when I win or lose game and in both cases that winning or loosing number is clearly displayed on the screen
 7. As a user, I want to be able to change my username and start new game
+
+## Design
+
+### Design Choices
+
+- The game was designed as a two page layout, where first page gives user quick glance on what this game is about with clear rules displayed while second page is where user plays his game with the simple & clear layout of the elements.
+
+### Colour
+
+- The main colours I picked for this project were black and yellow. With combination depends on what page user is curently on.
+
+### Fonts
+
+- For the fonts, I've used 'Shadows Into Light' font which gives whole page little bit dramatic and interesting look.
+
+### Wireframes
+<details><summary>Desktop version</summary>
+<img src="./readImg/balsamic.web.png">
+</details>
+<details><summary>Mobile version</summary>
+<img src="./readImg/balsamic.mob.png">
+</details>
+
+###
