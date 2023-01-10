@@ -1,6 +1,8 @@
 /*jshint esversion: 6*/
 
 //variables
+const copyright = document.getElementById("copy")
+
 const register = document.getElementById('register');
 
 const audioWin = document.getElementById("sound");
@@ -29,9 +31,9 @@ const redNumber = document.getElementById('nmb-red');
 //landing page user validation
 function validateUser() {
     let reg = /^[A-Za-z]+$/;
-    if (userName.value == "" || !userName.value.match(reg)) {
+    if (userName.value == ""|| !userName.value.match(reg)) {
         swal({
-            title: "Please type in letters!!!",
+            title: "Please type in letters, no empty space!!!",
             className: "swalAlert"
           });
         userName.focus();
@@ -46,6 +48,7 @@ register.addEventListener("submit", function (evt) {
         games.classList.remove("hidden");
         document.getElementById("userN").innerText = userName.value;
         predictionNumber.focus();
+        copyright.classList.add("black")
     }
 });
 
@@ -143,4 +146,5 @@ document.getElementById('btn-again').addEventListener('click', function () {
 document.getElementById("btn-back").addEventListener("click", function () {
     games.classList.add("hidden");
     userName.value = "";
+    copyright.classList.remove("black")
 });
