@@ -96,4 +96,61 @@ Get it right, is classic "chance"game in which user is trying to predict random 
 <img src="./readImg/balsamic.mob.png">
 </details>
 
-###
+## Technologies Used
+
+### Languages
+
+- HTML
+- CSS
+- JavaScript
+
+### Frameworks & Tools
+
+- Git
+- GitHub
+- Gitpod
+- Csscript
+- Balsamiq
+- Font Awesome
+- Favicon<span>.</span>io
+- JSHint
+- W3C Markup validation service
+- W3C Jigsaw CSS validation service
+- WAVE WebAIM web accessibility evaluation tool
+
+## Features
+
+The site consists of two pages.
+
+### Welcome page
+
+  - Provides user with rules of the game
+  - Provides user to type his name which will be displayed on the gaming page next to his score
+  <details><summary>Welcome page</summary>
+<img src="./readImg/landing.page.png"></details>
+
+### Game page
+
+- Clear headline with indication for the range of the guessing numbers
+- Question mark is where number will be displayed if user wins/lose the game, with text right next to it which guides user through the game as he plays
+- Input box so user can put his prediction and to check his input with button just bellow it
+- Clear indication on how many tries user got, and numbers that he already picked
+- Button to play again the game and button to go back to previous page if user wish to read rules or change his username
+<details><summary>Welcome page</summary>
+<img src="./readImg/gaming.page.png"></details>
+
+#### Game over screen
+
+- Gives user clear message that tells him that he lost the game, with the correct number right next to it
+- it also desibles "check" button so user can't click again and try the correct number
+- also sound button appears on the screen which user can click and get that famous "booo" sound for his performance
+<details><summary>Gameover screen</summary>
+<img src="./readImg/user.lost.game.png"></details>
+
+#### Correct guess screen
+
+- Gives user clear message that tells him that he won the game, with the correct number right next to it
+- it also desibles "check" button so user can't click on it again with different number
+- Upon win confetti animation is displayed around input label for user guess
+<details><summary>Win screen</summary>
+<img src="./readImg/user.won.game.png"></details>
