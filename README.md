@@ -110,13 +110,14 @@ Get it right, is classic "chance"game in which user is trying to predict random 
 - GitHub
 - Gitpod
 - Csscript
+- SweetAlert
 - Balsamiq
 - Font Awesome
 - Favicon<span>.</span>io
 - JSHint
 - W3C Markup validation service
 - W3C Jigsaw CSS validation service
-- WAVE WebAIM web accessibility evaluation tool
+l
 
 ## Features
 
@@ -177,4 +178,107 @@ JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascr
 
 <details><summary>JS</summary>
 <img src="./readImg/script.validator.png">
+</details>
+
+### Performance & Accessibility
+
+Google Lighthouse in Google Chrome Developer Tools was used to test the performance of the website.
+
+<details><summary>Google lighthouse</summary>
+<img src="./readImg/performance.test.png">
+</details>
+
+### Performing tests on various devices
+
+The website was tested on the following devices:
+
+- Samsung s22
+- Iphone 12
+- Samsung s10e
+
+In addition, the website was tested using the Google Chrome Developer Tools Device Toggling option for all available device options.
+
+### Browser Compatability
+
+The website was tested on the following browsers:
+
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Edge
+
+### Testing user stories
+
+1. As a user, I want to be able to create user name for the game
+
+| **Feature**  | **Action**                  | **Expected Result**                                          | **Actual Result** |
+| ------------ | --------------------------- | ------------------------------------------------------------ | ----------------- |
+| Welcome Page | Click on the username label | On click play button your name should apear in the game page | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="./readImg/input.name.png">
+</details>
+
+2. As a user, I want to get alert if my user name is not up to standards
+
+| **Feature** | **Action**                           | **Expected Result**                                           | **Actual Result** |
+| ----------- | ------------------------------------ | ------------------------------------------------------------- | ----------------- |
+| Welcome page   | Type either space or number and click "Play" | To check your input and display error message | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="./readImg/alert.window.png">
+</details>
+
+3. As a user, I want to be able to pick the numbers both by clicking the mouse and by using the keyboard
+
+| **Feature** | **Action**                                         | **Expected Result**                            | **Actual Result** |
+| ----------- | -------------------------------------------------- | ---------------------------------------------- | ----------------- |
+| Game screen | Click the higher on the label or use your keyboard | The used numbers can't be picked a second time | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="./readImg/input.field.nmb.png">
+</details>
+
+4. As a user, I want to be able to pick only numbers that are in the range of the rules of the game
+
+| **Feature** | **Action**                                 | **Expected Result**                                                                     | **Actual Result** |
+| ----------- | ------------------------------------------ | --------------------------------------------------------------------------------------- | ----------------- |
+| Game page   | Pick number higher or lower than the range | Message apears on the screen to show user range of the numbers game is beeing played at | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="./readImg/1-25.png">
+</details>
+
+5. As a user, I want indication if my guesses were higher or lower than the random pick
+
+| **Feature** | **Action**                                     | **Expected Result**                                                                | **Actual Result** |
+| ----------- | ---------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------- |
+| Game page   | Pick number that is not equal to random number | Message apears on the screen which gives user hint if his guess is lower or higher | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="./readImg/try.higher.nmb.png">
+</details>
+<details><summary>Screenshots</summary>
+<img src="./readImg/try.lower.nmb.png">
+</details>
+6. As a user, I want to know when I win or lose game and that in both cases random number is displayed on the screen
+
+| **Feature** | **Action**                                            | **Expected Result**                                                                                                                               | **Actual Result** |
+| ----------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| Game page   | Try random number multiple times till you win or lose | In case of winning message will be desplayed with confetti animation, in case of loosing message will be displayed with option to replicate sound | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="./readImg/user.lost.game.png">
+</details>
+<details><summary>Screenshots</summary>
+<img src="./readImg/user.won.game.png">
+</details>
+
+7. As a user, I want to be able to either play again, or go back and change to previous page and vhange my name
+
+| **Feature** | **Action**                | **Expected Result**                                                  | **Actual Result** |
+| ----------- | ------------------------- | -------------------------------------------------------------------- | ----------------- |
+| Game page   | Click on either on "Go back" or "Play again" button | User should be taken to "Landing page" so he can create new username, or new game should start for user | Work as expected  |
+
+<details><summary>Screenshots</summary>
+<img src="./readImg/back.png">
 </details>
