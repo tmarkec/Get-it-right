@@ -154,3 +154,27 @@ The site consists of two pages.
 - Upon win confetti animation is displayed around input label for user guess
 <details><summary>Win screen</summary>
 <img src="./readImg/user.won.game.png"></details>
+
+## Validation
+
+### HTML Validation
+
+The W3C Markup Validation Service was used to validate the HTML of the website. Page pass with no errors no warnings to show.
+
+<details><summary>HTML</summary>
+<img src="./readImg/html.validator.png"></details>
+
+### CSS Validation
+
+The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website. Page pass with no errors no warnings to show.
+
+<details><summary>CSS</summary>
+<img src="./readImg/css.validator.png"></details>
+
+### JavaScript Validation
+
+JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascript files. There were 2 undifined variables found in the check, both of them are outside libraries which are connected to HTML script code for confetti animation, and alert window
+
+<details><summary>JS</summary>
+<img src="./readImg/script.validator.png">
+</details>
