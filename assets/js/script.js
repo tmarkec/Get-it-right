@@ -30,7 +30,10 @@ const redNumber = document.getElementById('nmb-red');
 function validateUser() {
     let reg = /^[A-Za-z]+$/;
     if (userName.value == "" || !userName.value.match(reg)) {
-        alert("No numbers allowed");
+        swal({
+            title: "Please type in letters!!!",
+            className: "swalAlert"
+          });
         userName.focus();
         return false;
     } else {
@@ -107,12 +110,22 @@ document.getElementById('btn-check').addEventListener('click', function (e) {
     confirm();
 });
 //not working at the moment
-document.getElementById("btn-check").addEventListener("keydown", function (evt) {
+document.getElementById("prediction-number").addEventListener("keydown", function (evt) {
+    console.log("down!!!")
     if (evt.key === "Enter") {
         confirm();
     }
 });
 
+console.log("hello")
+
+// document.getElementById('prediction-number').onkeydown = function(e){
+//     if(e.key == "Enter"){
+//       // submit
+//       console.log("pressed key")
+//       confirm()
+//     }
+//  };
 //function to playing game again;
 document.getElementById('btn-again').addEventListener('click', function () {
     score = document.getElementById('nmb-blue').textContent = 0;

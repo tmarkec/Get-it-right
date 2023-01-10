@@ -13,10 +13,17 @@
 }
 
 /* ----------------landing page-------------*/
+.title {
+    text-align: center;
+    font-size: 5rem;
+    padding: 3rem;
+    color: #F1F7ED;
+    font-weight: bold;
+}
 .welcome {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
     background-color: #fff;
     height: 100vh;
     width: 100vw;
@@ -72,7 +79,10 @@
 .user-label:hover {
     border-color: rgb(250, 247, 60);
 }
-
+.swalAlert {
+    max-height: 11rem;
+    max-width: 14rem;
+}
 /* -------------- second page--game---------------*/
 .game {
     position: fixed;

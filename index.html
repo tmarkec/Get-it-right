@@ -14,9 +14,10 @@
 <body>
     <div class="background">
         <!-- Landing page with rules -->
-        <div id="welcome-box" class="welcome">
+        <section id="welcome-box" class="welcome">
+            <h1 class="title">Get it right ! ! !</h1>
             <div id="blur" class="blur-box">
-                <h1>Get it right!!!</h1>
+                <h1>Rules of the game</h1>
                 <ol>
                     <li>Try to guess random number from 1-25 with the little bit luck!</li>
                     <li>You only have 5 tries per game!</li>
@@ -25,13 +26,13 @@
                 </ol>
                 <form autocomplete="off" method="get" id="register">
                     <input type="text" name="username" id="username" class="user-label" required minlength="4"
-                        maxlength="10" placeholder="Username">
+                        maxlength="16" placeholder="Username">
                     <button type="submit" id="startBtn" class="btn btn-play">Play</button>
                 </form>
             </div>
-        </div>
+        </section>
         <!-- Second - game page -->
-        <div id="game-box" class="game hidden">
+        <section id="game-box" class="game hidden">
             <div class="game-container">
                 <header class="head">
                     <h1>Think of the number between 1 - 25?!</h1>
@@ -57,12 +58,13 @@
                     <button id="btn-back" class="btn">Go back</button>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
     <!-- Script - confetti animation -->
     <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
     <!-- Java script -->
     <script src="assets/js/script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
