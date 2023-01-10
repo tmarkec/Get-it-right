@@ -1,7 +1,7 @@
 /*jshint esversion: 6*/
 
 //variables
-const copyright = document.getElementById("copy")
+const copyright = document.getElementById("copy");
 
 const register = document.getElementById('register');
 
@@ -33,7 +33,7 @@ function validateUser() {
     let reg = /^[A-Za-z]+$/;
     if (userName.value == ""|| !userName.value.match(reg)) {
         swal({
-            title: "Please type in letters, no empty space!!!",
+            title: "Please type in letters, no empty space or numbers!!!",
             className: "swalAlert"
           });
         userName.focus();
@@ -48,7 +48,7 @@ register.addEventListener("submit", function (evt) {
         games.classList.remove("hidden");
         document.getElementById("userN").innerText = userName.value;
         predictionNumber.focus();
-        copyright.classList.add("black")
+        copyright.classList.add("black");
     }
 });
 
@@ -60,7 +60,7 @@ let displayText = function (text) {
 function confirm() {
     let input = +(document.getElementById('prediction-number').value);
     //user input same as already picked one;
-    predictionNumber.focus()
+    predictionNumber.focus();
     if (info.includes(input)) {
         displayText('Already tried this number!!!');
         return;
@@ -114,21 +114,11 @@ document.getElementById('btn-check').addEventListener('click', function (e) {
 });
 //not working at the moment
 document.getElementById("prediction-number").addEventListener("keydown", function (evt) {
-    console.log("down!!!")
     if (evt.key === "Enter") {
         confirm();
     }
 });
 
-console.log("hello")
-
-// document.getElementById('prediction-number').onkeydown = function(e){
-//     if(e.key == "Enter"){
-//       // submit
-//       console.log("pressed key")
-//       confirm()
-//     }
-//  };
 //function to playing game again;
 document.getElementById('btn-again').addEventListener('click', function () {
     score = document.getElementById('nmb-blue').textContent = 0;
@@ -146,5 +136,5 @@ document.getElementById('btn-again').addEventListener('click', function () {
 document.getElementById("btn-back").addEventListener("click", function () {
     games.classList.add("hidden");
     userName.value = "";
-    copyright.classList.remove("black")
+    copyright.classList.remove("black");
 });
