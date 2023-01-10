@@ -53,9 +53,9 @@ Get it right, is classic "chance"game in which user is trying to predict random 
 
 ### Target Audience
 
-- casual gamers
-- people who like to play "chance"games
-- people looking to test their luck skills
+- Casual gamers
+- People who like to play "chance"games
+- People looking to test their luck skills
 
 ### User Requirements and Expectations
 
@@ -67,12 +67,12 @@ Get it right, is classic "chance"game in which user is trying to predict random 
 ### User Stories
 
 1. As a user, I want to be able to create user name for the game
-2. As a user, I want to test my luck in this game
+2. As a user, I want to get alert if my user name is not up to standards
 3. As a user, I want to be able to pick the numbers both by clicking the mouse and by using the keyboard
 4. As a user, I want to be able to pick only numbers that are in the range of the rules of the game
 5. As a user, I want indication if my guesses were higher or lower than the random pick by computer
 6. As a user, I want to know when I win or lose game and in both cases that winning or loosing number is clearly displayed on the screen
-7. As a user, I want to be able to change my username and start new game
+7. As a user, I want to be able to either play again, or go back and change to previous page and change my name
 
 ## Design
 
@@ -117,7 +117,6 @@ Get it right, is classic "chance"game in which user is trying to predict random 
 - JSHint
 - W3C Markup validation service
 - W3C Jigsaw CSS validation service
-l
 
 ## Features
 
@@ -301,7 +300,7 @@ The website was tested on the following browsers:
 <img src="./readImg/user.won.game.png">
 </details>
 
-7. As a user, I want to be able to either play again, or go back and change to previous page and vhange my name
+7. As a user, I want to be able to either play again, or go back and change to previous page and change my name
 
 | **Feature** | **Action**                | **Expected Result**                                                  | **Actual Result** |
 | ----------- | ------------------------- | -------------------------------------------------------------------- | ----------------- |
