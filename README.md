@@ -83,7 +83,7 @@ Creating classic "chance" game in which user is trying to predict random number 
 
 ### Colour
 
-- The main colours I picked for this project were black and yellow. With combination depends on what page user is curently on.
+- Main colours that I picked for this project were [Yellow with hex value of  #f8b500](https://www.colorhexa.com/f8b500), with combination of [Black with hex value of #000000](https://www.colorhexa.com/000000), [Bright with hex value #f1f7ed](https://www.colorhexa.com/f1f7ed) & [Blue with hex value #345ed1](https://www.colorhexa.com/345ed1) to create contrast and good visibility accross the website.
 
 ### Fonts
 
@@ -361,7 +361,7 @@ You can clone the repository by following these steps:
           });"
 - Media
   - Credit for my image for the welcome page goes to [Unsplash](https://unsplash.com/) which I used as a background image 
-  - Credit for my image on the game page goes to [Makeusof](https://www.makeuseof.com/css-background-gradients/)which was used as bakground property
+  - Credit for my image on the game page goes to [Makeusof](https://www.makeuseof.com/css-background-gradients/) which was used as bakground property
   - For my logo I give credit to [App-logo](https://app.logo.com/) for easily generating my idea and automaticly creating logo for my website
   - Credit for my sound effects after finishing the game goes to [Mixkit](https://mixkit.co/)
   - instructions how to create my favicon came from [MDN Web Docs](https://developer.mozilla.org/en-US/)
