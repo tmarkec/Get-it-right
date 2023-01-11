@@ -300,11 +300,11 @@ The website was tested on the following browsers:
 <img src="./readImg/user.won.game.png">
 </details>
 
-7. As a user, I want to be able to either play again, or go back and change to previous page and change my name
+7. As a user, I want to be able to either play again, or to start new game with new username
 
 | **Feature** | **Action**                | **Expected Result**                                                  | **Actual Result** |
 | ----------- | ------------------------- | -------------------------------------------------------------------- | ----------------- |
-| Game page   | Click on either on "Go back" or "Play again" button | User should be taken to "Landing page" so he can create new username, or new game should start for user | Work as expected  |
+| Game page   | Click on either on "Go back" or "Play again" button | User should be taken to "Landing page" so he can create new username, or new game should start for the user | Work as expected  |
 
 <details><summary>Screenshots</summary>
 <img src="./readImg/back.png">
@@ -360,9 +360,10 @@ You can clone the repository by following these steps:
   "swal({title: "", className: ""
           });"
 - Media
-  - Credit for my images accross the website goes to [Unsplash](https://unsplash.com/) which I used as a background image on the landing page
+  - Credit for my image for the welcome page goes to [Unsplash](https://unsplash.com/) which I used as a background image 
+  - Credit for my image on the game page goes to [Makeusof](https://www.makeuseof.com/css-background-gradients/)which was used as bakground property
   - For my logo I give credit to [App-logo](https://app.logo.com/) for easily generating my idea and automaticly creating logo for my website
-  - Credit for my sound effects after playing the game goes to [Mixkit](https://mixkit.co/)
+  - Credit for my sound effects after finishing the game goes to [Mixkit](https://mixkit.co/)
   - instructions how to create my favicon came from [MDN Web Docs](https://developer.mozilla.org/en-US/)
   - credit for confetti animation after succesfully completing the game goes to [CSS Script](https://www.cssscript.com/confetti-animation-party/) which code I copied in my JS: "party.confetti(element);"
 - Acknowledgment
