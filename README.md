@@ -24,18 +24,18 @@
    1. [Welcome page](#welcome-page)
    2. [Game page](#game-page)
 6. [Testing](#testing)
-   1. [HTML Validation](#HTML-validation)
-   2. [CSS Validation](#CSS-validation)
+   1. [HTML Validation](#html-validation)
+   2. [CSS Validation](#css-validation)
    3. [JavaScript Validation](#javascript-validation)
    4. [Performance & Accessibility](#performance--accessibility)
    5. [Device testing](#performing-tests-on-various-devices)
    6. [Browser compatibility](#browser-compatability)
    7. [Testing user stories](#testing-user-stories)
-   8. [Other testiog](#other-testing)
-7. [Bugs](#Bugs)
+   8. [Other testing](#other-testing)
+7. [Bugs](#bugs)
 8. [Deployment](#deployment)
 9. [Credits](#credits)
-10. [Acknowledgments](#acknowledgments)
+   
 
 ## Project Goals
 Creating classic "chance" game in which user is trying to predict random number from 1-25, generated from the computer with limited attempts on the line.
@@ -355,7 +355,7 @@ You can clone the repository by following these steps:
 - Code & Content
   - I give credits to [Stack overflow](https://www.stackoverflow.com/), [MDN Web Docs](https://developer.mozilla.org/en-US/) & [W3 Schools](https://www.w3schools.com/) for helping me resolve issues with my HTML, CSS & JS while coding through
   - Inspiration for my game came from [codeduck](https://www.youtube.com/@TheCodeDuck) and [brocode](https://www.youtube.com/@BroCodez) youtube channels
-  - Credits for validating user on lanidng page goes to [w3resource](https://www.w3resource.com/javascript/form/letters-numbers-field.php)
+  - Credits for validating user on landing page goes to [w3resource](https://www.w3resource.com/javascript/form/letters-numbers-field.php)
   - Credits for alert window in the Landing page goes to [SweetAlert](https://sweetalert.js.org/guides/) which code I used and copied to my JS:
   "swal({title: "", className: ""
           });"
