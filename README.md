@@ -22,7 +22,7 @@
    1. [Languages](#languages)
    2. [Frameworks & Tools](#frameworks-&-tools)
 5. [Features](#features)
-6. [Testing](#validation)
+6. [Testing](#testing)
    1. [HTML Validation](#HTML-validation)
    2. [CSS Validation](#CSS-validation)
    3. [JavaScript Validation](#javascript-validation)
@@ -183,37 +183,36 @@ The site consists of two pages.
 - Upon win confetti animation is displayed around input label for user guess
 
 
-## Validation
+## Testing
 
 ### HTML Validation
 
-The W3C Markup Validation Service was used to validate the HTML of the website. Page pass with no errors no warnings to show.
 
 <details><summary>HTML</summary>
 <img src="./readImg/html.validator.png"></details>
 
-### CSS Validation
+The W3C Markup Validation Service was used to validate the HTML of the website. Page pass with no errors no warnings to show.
 
-The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website. Page pass with no errors no warnings to show.
+### CSS Validation
 
 <details><summary>CSS</summary>
 <img src="./readImg/css.validator.png"></details>
 
+The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website. Page pass with no errors no warnings to show.
+
 ### JavaScript Validation
 
-JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascript files. There were 2 undifined variables found in the check, both of them are outside libraries which are connected to HTML script code for confetti animation, and alert window
-
 <details><summary>JS</summary>
-<img src="./readImg/script.validator.png">
-</details>
+<img src="./readImg/script.validator.png"></details>
+JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascript files. There were 2 undifined variables found in the check(swal & party), both of them are outside libraries which are connected to HTML script code for confetti animation, and for the alert window.
 
 ### Performance & Accessibility
 
-Google Lighthouse in Google Chrome Developer Tools was used to test the performance of the website.
 
 <details><summary>Google lighthouse</summary>
-<img src="./readImg/performance.test.png">
-</details>
+<img src="./readImg/performance.test.png"></details>
+
+Google Lighthouse in Google Chrome Developer Tools was used to test the performance of the website.
 
 ### Performing tests on various devices
 
@@ -310,6 +309,8 @@ The website was tested on the following browsers:
 <img src="./readImg/back.png">
 </details>
 
+### Other testing
+I've tested all the buttons to work properly and to lead user where they supposed to and to perform actions that they were meant to. Tested all input fields so that name input field accept only letters with minimum length of 4 caracthers and max 16 caracthers. Tested input number field to accept only numbers above 0, and that enter on keyboard submits name on landing page field and number on the game page.
 ## Bugs
 
 | **Bug**                                                                                                         | **Fix**                                                                                                                                                       |
