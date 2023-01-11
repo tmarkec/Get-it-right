@@ -4,13 +4,14 @@
     margin: 0 auto;
     padding: 0;
     font-family: 'Shadows Into Light', cursive;
-   
+
 }
 
 .background {
     width: 100%;
     height: 100%;
 }
+
 /* ----------------landing page-------------*/
 .title {
     text-align: center;
@@ -20,8 +21,9 @@
     margin-bottom: 1rem;
     color: #F1F7ED;
     font-weight: bold;
- 
+
 }
+
 .welcome {
     display: flex;
     flex-direction: column;
@@ -30,7 +32,7 @@
     height: 100vh;
     max-width: 100vw;
     background-image: url(../images/background.jpg);
-  
+
 }
 
 .blur-box {
@@ -83,10 +85,13 @@
 .user-label:hover {
     border-color: rgb(250, 247, 60);
 }
+
 .swalAlert {
     max-height: 12rem;
     max-width: 16rem;
+
 }
+
 /* -------------- second page--game---------------*/
 .game {
     position: fixed;
@@ -110,13 +115,14 @@
     justify-content: center;
     align-items: center;
     margin: 0.5rem;
-    
+
 }
 
 .head {
     font-size: 1.4rem;
     padding-top: 1rem;
 }
+
 /*random div*/
 .random {
     display: flex;
@@ -163,6 +169,7 @@
     font-size: 3rem;
     font-weight: 800;
 }
+
 /*buttons*/
 .btn {
     margin: 0.5rem;
@@ -221,6 +228,7 @@
     font-size: 2.4rem;
     font-weight: bold;
 }
+
 /*--------------footer ----------------*/
 .copyright {
     text-align: center;
@@ -234,10 +242,12 @@
     width: 100%;
 
 }
+
 .black {
     background-color: black;
     color: #f8b500;
 }
+
 /*----------media querry---------------------*/
 
 /*800px*/
@@ -257,6 +267,7 @@
     .blur-box {
         max-width: 80%;
     }
+
     .head {
         font-size: 1.2rem;
         padding: 0.2rem 0.8rem;
@@ -265,28 +276,35 @@
     .random-text {
         font-size: 1.6rem;
     }
+
     .nmbB .nmbR {
-        font-size: 2rem;    
+        font-size: 2rem;
     }
+
     .life .highscore {
         font-size: 1.2rem;
     }
+
     .predictions {
         height: 3rem;
         width: 3.5rem;
     }
 }
+
 /*400px*/
 @media screen and (max-width:400px) {
     .game-container {
         margin: 0;
     }
+
     .title {
         font-size: 2.5rem;
     }
+
     .prediction {
         flex-direction: row;
     }
+
     .blur-box h1 {
         font-size: 1.2rem;
     }

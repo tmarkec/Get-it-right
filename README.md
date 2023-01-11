@@ -16,28 +16,29 @@
    1. [Design Choices](#design-choices)
    2. [Colour](#colours)
    3. [Fonts](#fonts)
-   4. [Structure](#structure)
-   5. [Wireframes](#wireframes)
+   4. [Wireframes](#wireframes)
 4. [Technologies Used](#technologies-used)
    1. [Languages](#languages)
    2. [Frameworks & Tools](#frameworks-&-tools)
 5. [Features](#features)
+   1. [Welcome page](#welcome-page)
+   2. [Game page](#game-page)
 6. [Testing](#testing)
    1. [HTML Validation](#HTML-validation)
    2. [CSS Validation](#CSS-validation)
    3. [JavaScript Validation](#javascript-validation)
-   4. [Accessibility](#accessibility)
-   5. [Performance](#performance)
-   6. [Device testing](#performing-tests-on-various-devices)
-   7. [Browser compatibility](#browser-compatability)
-   8. [Testing user stories](#testing-user-stories)
+   4. [Performance & Accessibility](#performance--accessibility)
+   5. [Device testing](#performing-tests-on-various-devices)
+   6. [Browser compatibility](#browser-compatability)
+   7. [Testing user stories](#testing-user-stories)
+   8. [Other testiog](#other-testing)
 7. [Bugs](#Bugs)
 8. [Deployment](#deployment)
 9. [Credits](#credits)
 10. [Acknowledgments](#acknowledgments)
 
 ## Project Goals
-Get it right, is classic "chance"game in which user is trying to predict random number generated from computer with limited attempts on the line. Numbers are in the range from 1 - 25!
+Creating classic "chance" game in which user is trying to predict random number from 1-25, generated from the computer with limited attempts on the line.
 
 ### User Goals
 
@@ -212,7 +213,7 @@ JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascr
 <details><summary>Google lighthouse</summary>
 <img src="./readImg/performance.test.png"></details>
 
-Google Lighthouse in Google Chrome Developer Tools was used to test the performance of the website.
+Google Lighthouse in Google Chrome Developer Tools was used to test the performance and accessibility of the website.
 
 ### Performing tests on various devices
 

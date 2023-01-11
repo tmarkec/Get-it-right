@@ -15,8 +15,6 @@ const userName = document.getElementById("username");
 
 let randomNum = Math.trunc(Math.random() * 25) + 1;
 
-document.getElementById("random-pick").textContent = randomNum;
-
 let score = document.getElementById('nmb-blue').textContent = 0;
 
 let info = [];
@@ -31,11 +29,11 @@ const redNumber = document.getElementById('nmb-red');
 //landing page user validation
 function validateUser() {
     let reg = /^[A-Za-z]+$/;
-    if (userName.value == ""|| !userName.value.match(reg)) {
+    if (userName.value == "" || !userName.value.match(reg)) {
         swal({
             title: "Please type in letters, no empty space or numbers!!!",
             className: "swalAlert"
-          });
+        });
         userName.focus();
         return false;
     } else {
