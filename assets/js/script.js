@@ -47,6 +47,7 @@ register.addEventListener("submit", function (evt) {
         document.getElementById("userN").innerText = userName.value;
         predictionNumber.focus();
         copyright.classList.add("black");
+        randomPick.classList.add('border');
     }
 });
 
@@ -82,11 +83,11 @@ function confirm() {
         displayText(`Well done ${userName.value} you won`);
         randomPick.textContent = randomNum;
         predictionNumber.value = "";
-        randomPick.style.border = "0";
-        randomPick.classList.add("win")
+        randomPick.classList.add("win");
         party.confetti(games);
         audioWin.play();
         document.getElementById("btn-check").disabled = true;
+        randomPick.classList.remove('border');
         return;
     }
 
@@ -102,10 +103,10 @@ function confirm() {
         displayText(`${userName.value} you lost!!!`);
         predictionNumber.value = "";
         randomPick.textContent = randomNum;
-        randomPick.style.border = "0";
-        randomPick.classList.add("nmbR")
+        randomPick.classList.add("nmbR");
         audioLose.play();
         document.getElementById("btn-check").disabled = true;
+        randomPick.classList.remove('border');
     }
 }
 
@@ -116,17 +117,19 @@ function playAgain (){
     displayText("Start guessing...");
     predictionNumber.value = "";
     randomPick.textContent = "?";
-    randomPick.classList.remove("nmbR")
-    randomPick.classList.remove("win")
+    randomPick.classList.remove("nmbR");
+    randomPick.classList.remove("win");
     document.body.style.background = "white";
     info = [];
     redNumber.innerHTML = "";
+    randomPick.classList.add('border');
     document.getElementById("btn-check").disabled = false;
 }
 //game page - checking user input with mouse click
 document.getElementById("btn-check").addEventListener("click", function (e) {
     confirm();
 });
+
 //game page - checking user input with enter
 document.getElementById("prediction-number").addEventListener("keydown", function (evt) {
     if (evt.key === "Enter") {

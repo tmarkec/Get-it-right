@@ -136,13 +136,15 @@
     align-items: center;
     text-align: center;
     margin: 1rem 2rem 0.5rem;
-    border: 2px solid black;
-    border-radius: 50%;
     padding: 0.5rem;
     height: 3rem;
     width: 3rem;
     font-size: 2.6rem;
     font-weight: 800;
+}
+.border {
+    border: 2px solid black;
+    border-radius: 50%;
 }
 
 .random-text {
