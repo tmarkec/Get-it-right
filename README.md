@@ -136,7 +136,7 @@ The site consists of two pages.
 <img src="./readme-img/rules.png"></details>
 
   - Provides user with rules of the game
-  <details><summary>Input field</summary>
+  <details><summary>Input field with "Play"</summary>
 <img src="./readme-img/input-name.png"></details>
 
   - Provides user to type his name which will be displayed on the gaming page next to his score with button for user to start to play the game
@@ -157,8 +157,11 @@ The site consists of two pages.
 
 <details><summary>User input number</summary>
 <img src="./readme-img/input-field-nmb.png"></details>
+<details><summary>Check button</summary>
+<img src="./readme-img/check-input.png"></details>
 
 - Input box so user can put his prediction and to check his input with button just bellow it
+
 <details><summary>User info</summary>
 <img src="./readme-img/text-users.png"></details>
 

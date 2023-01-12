@@ -111,7 +111,7 @@ function confirm() {
 }
 
 //function to play again game
-function playAgain (){
+function playAgain() {
     score = document.getElementById("nmb-blue").innerHTML = 0;
     randomNum = Math.trunc(Math.random() * 25) + 1;
     displayText("Start guessing...");
@@ -138,7 +138,7 @@ document.getElementById("prediction-number").addEventListener("keydown", functio
 
 //game page - play again
 document.getElementById("btn-again").addEventListener("click", function () {
-    playAgain();  
+    playAgain();
 });
 
 //button for back to the welcome page
