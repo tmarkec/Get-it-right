@@ -72,8 +72,9 @@ Creating classic "chance" game in which user is trying to predict random number 
 3. As a user, I want to be able to pick the numbers both by clicking the mouse and by using the keyboard
 4. As a user, I want to be able to pick only numbers that are in the range of the rules of the game
 5. As a user, I want indication if my guesses were higher or lower than the random pick by computer
-6. As a user, I want to know when I win or lose game and in both cases that winning or loosing number is clearly displayed on the screen
-7. As a user, I want to be able to either play again, or go back and change to previous page and change my name
+6. As a user, I don't want to be able to pick same numbers I already picked
+7. As a user, I want to know when I win or lose game and in both cases that winning or loosing number is clearly displayed on the screen
+8. As a user, I want to be able to either play again, or go back and change to previous page and change my name
 
 ## Design
 
@@ -84,6 +85,9 @@ Creating classic "chance" game in which user is trying to predict random number 
 ### Colour
 
 - Main colours that I picked for this project were [Yellow with hex value of  #f8b500](https://www.colorhexa.com/f8b500), with combination of [Black with hex value of #000000](https://www.colorhexa.com/000000), [Bright with hex value #f1f7ed](https://www.colorhexa.com/f1f7ed) & [Blue with hex value #345ed1](https://www.colorhexa.com/345ed1) to create contrast and good visibility accross the website.
+<details><summary>Color palette</summary>
+<img src="./readme-img/palette.png">
+</details>
 
 ### Fonts
 
@@ -239,7 +243,7 @@ The website was tested on the following browsers:
 
 | **Feature**  | **Action**                  | **Expected Result**                                          | **Actual Result** |
 | ------------ | --------------------------- | ------------------------------------------------------------ | ----------------- |
-| Welcome Page | Click on the username label | On click play button your name should apear in the game page | Works as expected |
+| Welcome Page | Click on the username label on welcome page and press "Play" | On click "Play button or "Enter" press on the keyboard your name should apear on the game page next to "Tries" section | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="./readme-img/input-name.png">
@@ -259,10 +263,10 @@ The website was tested on the following browsers:
 
 | **Feature** | **Action**                                         | **Expected Result**                            | **Actual Result** |
 | ----------- | -------------------------------------------------- | ---------------------------------------------- | ----------------- |
-| Game screen | Click the higher on the label or use your keyboard | The used numbers can't be picked a second time | Works as expected |
+| Game screen | Click "up"" on the label of the input screen or use your keyboard to type numbers and then press "Enter" os simply click "Check" button| Accept inut both by click of the mouse or use of the keyboard | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="./readme-img/input-field-nmb.png">
+<img src="./readme-img/check-input.png">
 </details>
 
 4. As a user, I want to be able to pick only numbers that are in the range of the rules of the game!
@@ -287,7 +291,18 @@ The website was tested on the following browsers:
 <details><summary>Screenshots</summary>
 <img src="./readme-img/try-lower-nmb.png">
 </details>
-6. As a user, I want to know when I win or lose game and that in both cases random number is displayed on the screen
+
+6. As a user, I don't want to be able to pick same numbers I already picked
+
+| **Feature** | **Action**                                     | **Expected Result**                                                                | **Actual Result** |
+| ----------- | ---------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------- |
+| Game page   | Pick same number thatyou already tried | Number was not added in the "tried so far" section, and message appears on the screen for user | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="./readme-img/already-tried.png">
+</details>
+
+7. As a user, I want to know when I win or lose game and that in both cases random number is displayed on the screen
 
 | **Feature** | **Action**                                            | **Expected Result**                                                                                                                               | **Actual Result** |
 | ----------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
@@ -300,7 +315,7 @@ The website was tested on the following browsers:
 <img src="./readme-img/user-won-game.png">
 </details>
 
-7. As a user, I want to be able to either play again, or to start new game with new username
+8. As a user, I want to be able to either play again, or to start new game with new username
 
 | **Feature** | **Action**                | **Expected Result**                                                  | **Actual Result** |
 | ----------- | ------------------------- | -------------------------------------------------------------------- | ----------------- |
