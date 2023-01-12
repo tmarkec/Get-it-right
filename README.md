@@ -14,7 +14,7 @@
    4. [Site Owner Stories](#site-owner-stories)
 3. [Design](#design)
    1. [Design Choices](#design-choices)
-   2. [Colour](#colours)
+   2. [Color](#color)
    3. [Fonts](#fonts)
    4. [Wireframes](#wireframes)
 4. [Technologies Used](#technologies-used)
@@ -67,8 +67,8 @@ Creating classic "chance" game in which user is trying to predict random number 
 
 ### User Stories
 
-1. As a user, I want to be able to create user name for the game
-2. As a user, I want to get alert if my user name is not up to standards
+1. As a user, I want to be able to create username for the game
+2. As a user, I want to get alert if my username is not up to standards
 3. As a user, I want to be able to pick the numbers both by clicking the mouse and by using the keyboard
 4. As a user, I want to be able to pick only numbers that are in the range of the rules of the game
 5. As a user, I want indication if my guesses were higher or lower than the random pick by computer
@@ -82,7 +82,7 @@ Creating classic "chance" game in which user is trying to predict random number 
 
 - The game was designed as a two page layout, where first page gives user quick glance on what this game is about with clear rules displayed while second page is where user plays his game with the simple & clear layout of the elements.
 
-### Colour
+### Color
 
 - Main colours that I picked for this project were [Yellow with hex value of  #f8b500](https://www.colorhexa.com/f8b500), with combination of [Black with hex value of #000000](https://www.colorhexa.com/000000), [Bright with hex value #f1f7ed](https://www.colorhexa.com/f1f7ed) & [Blue with hex value #345ed1](https://www.colorhexa.com/345ed1) to create contrast and good visibility accross the website.
 <details><summary>Color palette</summary>
@@ -239,7 +239,7 @@ The website was tested on the following browsers:
 
 ### Testing user stories
 
-1. As a user, I want to be able to create user name for the game
+1. As a user, I want to be able to create username for the game
 
 | **Feature**  | **Action**                  | **Expected Result**                                          | **Actual Result** |
 | ------------ | --------------------------- | ------------------------------------------------------------ | ----------------- |
@@ -249,7 +249,7 @@ The website was tested on the following browsers:
 <img src="./readme-img/input-name.png">
 </details>
 
-2. As a user, I want to get alert if my user name is not up to standards
+2. As a user, I want to get alert if my username is not up to standards
 
 | **Feature** | **Action**                           | **Expected Result**                                           | **Actual Result** |
 | ----------- | ------------------------------------ | ------------------------------------------------------------- | ----------------- |
@@ -263,10 +263,13 @@ The website was tested on the following browsers:
 
 | **Feature** | **Action**                                         | **Expected Result**                            | **Actual Result** |
 | ----------- | -------------------------------------------------- | ---------------------------------------------- | ----------------- |
-| Game screen | Click "up"" on the label of the input screen or use your keyboard to type numbers and then press "Enter" os simply click "Check" button| Accept inut both by click of the mouse or use of the keyboard | Works as expected |
+| Game screen | Click "up"" on the label of the input screen or use your keyboard to type numbers and then press "Enter" os simply click "Check" button| Accept input both by click of the mouse or use of the keyboard | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="./readme-img/check-input.png">
+</details>
+<details><summary>Screenshots</summary>
+<img src="./readme-img/input-field-nmb.png">
 </details>
 
 4. As a user, I want to be able to pick only numbers that are in the range of the rules of the game!
@@ -296,7 +299,7 @@ The website was tested on the following browsers:
 
 | **Feature** | **Action**                                     | **Expected Result**                                                                | **Actual Result** |
 | ----------- | ---------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------- |
-| Game page   | Pick same number thatyou already tried | Number was not added in the "tried so far" section, and message appears on the screen for user | Works as expected |
+| Game page   | Pick same number that you already tried | Number was not added in the "tried so far" section, and message appears on the screen for user | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="./readme-img/already-tried.png">
@@ -331,15 +334,16 @@ I've tested all the buttons to work properly and to lead user where they suppose
 
 | **Bug**                                                                                                         | **Fix**                                                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Could not put button "check" in able position after the game was finished. When you finish game it is disabled! | Created function outside clickevent and called that function inside clickevent, and add propartie .disabled to true/ false depend on the progress of the game |
+| Could not put button "check" in able position after the game was finished. When you finish game it is disabled! | Created function outside clickevent and called that function inside clickevent, and add proparties .disabled to true/ false depend on the progress of the game |
 | Background image did not load on live pages, but localy it did                                                  | Change file path in my html file to ../ and skip assets folder                                                                                                |
 | You could have type and chose negative numbers in input field                                                   | Created if else stateman with parametars, and add min value in html file                                                                                      |
 | Sound for winning or loosing the game was only replicated on click of the button                                | Created variables outside function which calls html audio element, and placed it inside if else statemants with and added .play() to the variables            |
-| Overall score/tries attempt where only displayed after second click                                             | Incrementer score ++ was put in front of if else statemants                                                                                                   |
+| Overall score/tries attempt where only displayed after second click                                             | Incrementer score ++ was put in front of if/else statemants                                                                                                   |
 | The landing page on smaller screen sizes looked small and long                                                  | Increase max-width of the div element for smaller screens                                                                                                     |
 | On input field in the game by pressing "Enter" on the keyboard nothing happend.                                 | Instead of targeting "check" button with function, I've targeted input field itself and added function that check user input                                  |
 | Standard pop-up alert window!                                                                                   | Used outside library and code from "sweet alert"                                                                                                              |
 | There are 2 undefined variable in jshint | Still present as both variables are used from outside source to implement confetti animation and for alert window which script tags are places in HTML. They do not interfere with game performance.
+| User could put punctuation characters, spaces and numbers as username | Used function with code "/^[A-Za-z]+$/" and examples from [w3resource.com](https://www.w3resource.com/javascript/form/javascript-sample-registration-form-validation.php)
 
 ## Deployment
 
