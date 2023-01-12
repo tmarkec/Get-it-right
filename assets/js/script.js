@@ -61,6 +61,7 @@ function confirm() {
     predictionNumber.focus();
     if (info.includes(input)) {
         displayText("Already tried this number!!!");
+        predictionNumber.value = "";
         return;
     }
     //limit user pick numbers within the game rules and avoid number 0;
@@ -82,6 +83,7 @@ function confirm() {
         randomPick.textContent = randomNum;
         predictionNumber.value = "";
         randomPick.style.border = "0";
+        randomPick.classList.add("win")
         party.confetti(games);
         audioWin.play();
         document.getElementById("btn-check").disabled = true;
@@ -101,6 +103,7 @@ function confirm() {
         predictionNumber.value = "";
         randomPick.textContent = randomNum;
         randomPick.style.border = "0";
+        randomPick.classList.add("nmbR")
         audioLose.play();
         document.getElementById("btn-check").disabled = true;
     }
@@ -124,6 +127,8 @@ document.getElementById("btn-again").addEventListener("click", function () {
     displayText("Start guessing...");
     predictionNumber.value = "";
     randomPick.textContent = "?";
+    randomPick.classList.remove("nmbR")
+    randomPick.classList.remove("win")
     document.body.style.background = "white";
     info = [];
     redNumber.innerHTML = "";

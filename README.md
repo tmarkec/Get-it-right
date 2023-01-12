@@ -324,7 +324,7 @@ I've tested all the buttons to work properly and to lead user where they suppose
 | The landing page on smaller screen sizes looked small and long                                                  | Increase max-width of the div element for smaller screens                                                                                                     |
 | On input field in the game by pressing "Enter" on the keyboard nothing happend.                                 | Instead of targeting "check" button with function, I've targeted input field itself and added function that check user input                                  |
 | Standard pop-up alert window!                                                                                   | Used outside library and code from "sweet alert"                                                                                                              |
-| 2 undefined variable in jshint | Still present as both variables are used from outside source to implement confetti animation and for alert window which script tags are places in HTML. They do not interfere with game performance.
+| There are 2 undefined variable in jshint | Still present as both variables are used from outside source to implement confetti animation and for alert window which script tags are places in HTML. They do not interfere with game performance.
 
 ## Deployment
 
