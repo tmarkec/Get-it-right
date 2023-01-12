@@ -109,19 +109,8 @@ function confirm() {
     }
 }
 
-//game page - checking user input
-document.getElementById("btn-check").addEventListener("click", function (e) {
-    confirm();
-});
-//not working at the moment
-document.getElementById("prediction-number").addEventListener("keydown", function (evt) {
-    if (evt.key === "Enter") {
-        confirm();
-    }
-});
-
-//function to playing game again;
-document.getElementById("btn-again").addEventListener("click", function () {
+//function to play again game
+function playAgain (){
     score = document.getElementById("nmb-blue").textContent = 0;
     randomNum = Math.trunc(Math.random() * 25) + 1;
     displayText("Start guessing...");
@@ -133,9 +122,24 @@ document.getElementById("btn-again").addEventListener("click", function () {
     info = [];
     redNumber.innerHTML = "";
     document.getElementById("btn-check").disabled = false;
+}
+//game page - checking user input with mouse click
+document.getElementById("btn-check").addEventListener("click", function (e) {
+    confirm();
+});
+//game page - checking user input with enter
+document.getElementById("prediction-number").addEventListener("keydown", function (evt) {
+    if (evt.key === "Enter") {
+        confirm();
+    }
 });
 
-//if user wish to read rules again or change user name;
+//game page - play again
+document.getElementById("btn-again").addEventListener("click", function () {
+    playAgain();  
+});
+
+//button for back to the welcome page
 document.getElementById("btn-back").addEventListener("click", function () {
     games.classList.add("hidden");
     userName.value = "";
