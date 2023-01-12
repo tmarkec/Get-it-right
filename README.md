@@ -1,6 +1,6 @@
 # Get it right
 
-![Am I responsive snapshot](/readImg/responsivness.png)
+![Am I responsive snapshot](/readme-img/responsivness.png)
 [View the Live Website Here](https://tmarkec.github.io/Get-it-right/)
 
 ## Table of Content
@@ -91,10 +91,10 @@ Creating classic "chance" game in which user is trying to predict random number 
 
 ### Wireframes
 <details><summary>Desktop version</summary>
-<img src="./readImg/balsamic.web.png">
+<img src="./readme-img/balsamic-web.png">
 </details>
 <details><summary>Mobile version</summary>
-<img src="./readImg/balsamic.mob.png">
+<img src="./readme-img/balsamic-mob.png">
 </details>
 
 ## Technologies Used
@@ -126,48 +126,48 @@ The site consists of two pages.
 ### Welcome page
 
 <details><summary>Welcome page</summary>
-<img src="./readImg/landing.page.png"></details>
+<img src="./readme-img/landing-page.png"></details>
 
   <details><summary>Rules</summary>
-<img src="./readImg/RULES.png"></details>
+<img src="./readme-img/rules.png"></details>
 
   - Provides user with rules of the game
   <details><summary>Input field</summary>
-<img src="./readImg/input.name.png"></details>
+<img src="./readme-img/input-name.png"></details>
 
   - Provides user to type his name which will be displayed on the gaming page next to his score with button for user to start to play the game
 ### Game page
 
 <details><summary>Game page</summary>
-<img src="./readImg/gaming.page.png"></details>
+<img src="./readme-img/gaming-page.png"></details>
 
 <details><summary>Range of numbers</summary>
-<img src="./readImg/range.png"></details>
+<img src="./readme-img/range.png"></details>
 
 - Clear headline with indication for the range of the guessing numbers
 
 <details><summary>Computer random number with text</summary>
-<img src="./readImg/guess.png"></details>
+<img src="./readme-img/guess.png"></details>
 
 - Question mark is where number will be displayed if user wins/lose the game, with text right next to it which guides user through the game as he plays
 
 <details><summary>User input number</summary>
-<img src="./readImg/input.field.nmb.png"></details>
+<img src="./readme-img/input-field-nmb.png"></details>
 
 - Input box so user can put his prediction and to check his input with button just bellow it
 <details><summary>User info</summary>
-<img src="./readImg/text.users.png"></details>
+<img src="./readme-img/text-users.png"></details>
 
 - Clear indication on how many tries user got, and numbers that he already picked
 <details><summary>Buttons to play again or to go back </summary>
-<img src="./readImg/back.png"></details>
+<img src="./readme-img/back.png"></details>
 
 - Button to play again the game and button to go back to previous page if user wish to read rules or change his username
 
 #### Game over screen
 
 <details><summary>Gameover screen</summary>
-<img src="./readImg/user.lost.game.png"></details>
+<img src="./readme-img/user-lost-game.png"></details>
 
 - Gives user clear message that tells him that he lost the game, with the correct number right next to it
 - it also desibles "check" button so user can't click again and try the correct number
@@ -177,7 +177,7 @@ The site consists of two pages.
 #### Correct guess screen
 
 <details><summary>Win screen</summary>
-<img src="./readImg/user.won.game.png"></details>
+<img src="./readme-img/user-won-game.png"></details>
 
 - Gives user clear message that tells him that he won the game, with the correct number right next to it
 - it also desibles "check" button so user can't click on it again with different number
@@ -190,28 +190,28 @@ The site consists of two pages.
 
 
 <details><summary>HTML</summary>
-<img src="./readImg/html.validator.png"></details>
+<img src="./readme-img/html-validator.png"></details>
 
 The W3C Markup Validation Service was used to validate the HTML of the website. Page pass with no errors no warnings to show.
 
 ### CSS Validation
 
 <details><summary>CSS</summary>
-<img src="./readImg/css.validator.png"></details>
+<img src="./readme-img/css-validator.png"></details>
 
 The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website. Page pass with no errors no warnings to show.
 
 ### JavaScript Validation
 
 <details><summary>JS</summary>
-<img src="./readImg/script.validator.png"></details>
-JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascript files. There were 2 undifined variables found in the check(swal & party), both of them are outside libraries which are connected to HTML script code for confetti animation, and for the alert window.
+<img src="./readme-img/script-validator.png"></details>
+JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascript file. There were 2 undifined variables found in the check which are(swal & party). Both of them are outside libraries which are connected directly to HTML file - script code and used as confetti animation when user wins, and for the alert window in case of number or space input in the name field.
 
 ### Performance & Accessibility
 
 
 <details><summary>Google lighthouse</summary>
-<img src="./readImg/performance.test.png"></details>
+<img src="./readme-img/performance-test.png"></details>
 
 Google Lighthouse in Google Chrome Developer Tools was used to test the performance and accessibility of the website.
 
@@ -242,7 +242,7 @@ The website was tested on the following browsers:
 | Welcome Page | Click on the username label | On click play button your name should apear in the game page | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="./readImg/input.name.png">
+<img src="./readme-img/input-name.png">
 </details>
 
 2. As a user, I want to get alert if my user name is not up to standards
@@ -252,7 +252,7 @@ The website was tested on the following browsers:
 | Welcome page   | Type either space or number and click "Play" | To check your input and display error message | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="./readImg/alert.window.png">
+<img src="./readme-img/alert-window.png">
 </details>
 
 3. As a user, I want to be able to pick the numbers both by clicking the mouse and by using the keyboard
@@ -262,17 +262,17 @@ The website was tested on the following browsers:
 | Game screen | Click the higher on the label or use your keyboard | The used numbers can't be picked a second time | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="./readImg/input.field.nmb.png">
+<img src="./readme-img/input-field-nmb.png">
 </details>
 
-4. As a user, I want to be able to pick only numbers that are in the range of the rules of the game
+4. As a user, I want to be able to pick only numbers that are in the range of the rules of the game!
 
 | **Feature** | **Action**                                 | **Expected Result**                                                                     | **Actual Result** |
 | ----------- | ------------------------------------------ | --------------------------------------------------------------------------------------- | ----------------- |
-| Game page   | Pick number higher or lower than the range | Message apears on the screen to show user range of the numbers game is beeing played at | Works as expected |
+| Game page   | Pick number higher or lower(only using keyboard for lower) than the range of the game | Message apears on the screen to show user range of the numbers game is beeing played at | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="./readImg/1-25.png">
+<img src="./readme-img/1-25.png">
 </details>
 
 5. As a user, I want indication if my guesses were higher or lower than the random pick
@@ -282,10 +282,10 @@ The website was tested on the following browsers:
 | Game page   | Pick number that is not equal to random number | Message apears on the screen which gives user hint if his guess is lower or higher | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="./readImg/try.higher.nmb.png">
+<img src="./readme-img/try-higher-nmb.png">
 </details>
 <details><summary>Screenshots</summary>
-<img src="./readImg/try.lower.nmb.png">
+<img src="./readme-img/try-lower-nmb.png">
 </details>
 6. As a user, I want to know when I win or lose game and that in both cases random number is displayed on the screen
 
@@ -294,10 +294,10 @@ The website was tested on the following browsers:
 | Game page   | Try random number multiple times till you win or lose | In case of winning message will be desplayed with confetti animation, in case of loosing message will be displayed with option to replicate sound | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="./readImg/user.lost.game.png">
+<img src="./readme-img/user-lost-game.png">
 </details>
 <details><summary>Screenshots</summary>
-<img src="./readImg/user.won.game.png">
+<img src="./readme-img/user-won-game.png">
 </details>
 
 7. As a user, I want to be able to either play again, or to start new game with new username
@@ -307,7 +307,7 @@ The website was tested on the following browsers:
 | Game page   | Click on either on "Go back" or "Play again" button | User should be taken to "Landing page" so he can create new username, or new game should start for the user | Work as expected  |
 
 <details><summary>Screenshots</summary>
-<img src="./readImg/back.png">
+<img src="./readme-img/back.png">
 </details>
 
 ### Other testing

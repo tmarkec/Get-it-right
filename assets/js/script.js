@@ -15,7 +15,7 @@ const userName = document.getElementById("username");
 
 let randomNum = Math.trunc(Math.random() * 25) + 1;
 
-let score = document.getElementById("nmb-blue").textContent = 0;
+let score = document.getElementById("nmb-blue").innerHTML = 0;
 
 let info = [];
 
@@ -52,7 +52,7 @@ register.addEventListener("submit", function (evt) {
 });
 
 let displayText = function (text) {
-    document.getElementById("text").textContent = text;
+    document.getElementById("text").innerHTML = text;
 };
 
 //function to run the game
@@ -72,16 +72,16 @@ function confirm() {
     }
 
     score++;
-    document.getElementById("nmb-blue").textContent = score;
+    document.getElementById("nmb-blue").innerHTML = score;
     info.push(input);
-    redNumber.textContent = info;
+    redNumber.innerHTML = info;
     predictionNumber.value = "";
 
 
     //user wins the game;
     if (input === randomNum) {
         displayText(`Well done ${userName.value} you won`);
-        randomPick.textContent = randomNum;
+        randomPick.innerHTML = randomNum;
         predictionNumber.value = "";
         randomPick.classList.add("win");
         party.confetti(games);
@@ -94,7 +94,7 @@ function confirm() {
     //if user guess is higher or lower than random picked number;
     if (score <= 4) {
         if (score !== randomNum) {
-            document.getElementById("text").textContent = input > randomNum ? `${userName.value} try lower number!` : `${userName.value} try higher number!`;
+            document.getElementById("text").innerHTML = input > randomNum ? `${userName.value} try lower number!` : `${userName.value} try higher number!`;
         }
     }
 
@@ -102,7 +102,7 @@ function confirm() {
     else {
         displayText(`${userName.value} you lost!!!`);
         predictionNumber.value = "";
-        randomPick.textContent = randomNum;
+        randomPick.innerHTML = randomNum;
         randomPick.classList.add("nmbR");
         audioLose.play();
         document.getElementById("btn-check").disabled = true;
@@ -112,14 +112,13 @@ function confirm() {
 
 //function to play again game
 function playAgain (){
-    score = document.getElementById("nmb-blue").textContent = 0;
+    score = document.getElementById("nmb-blue").innerHTML = 0;
     randomNum = Math.trunc(Math.random() * 25) + 1;
     displayText("Start guessing...");
     predictionNumber.value = "";
-    randomPick.textContent = "?";
+    randomPick.innerHTML = "?";
     randomPick.classList.remove("nmbR");
     randomPick.classList.remove("win");
-    document.body.style.background = "white";
     info = [];
     redNumber.innerHTML = "";
     randomPick.classList.add('border');
@@ -148,4 +147,6 @@ document.getElementById("btn-back").addEventListener("click", function () {
     userName.value = "";
     copyright.classList.remove("black");
     displayText("Start guessing...");
+    info = [];
+    redNumber.innerHTML = "";
 });
